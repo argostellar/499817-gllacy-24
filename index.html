@@ -5,8 +5,68 @@
     <title>HTML Academy: Глейси</title>
   </head>
   <body>
+    <header class="main-header">
+      <a class="main-header__logo">
+        <img src="img/logo.png" alt="Логотип мазазина мороженого Глейси">
+      </a>
+      <nav class="main-nav"> // или лучше назвать класс main-header__nav?
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link">Каталог</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link">Доставка и оплата</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link">О Компании</a>
+        </li>
+      </ul>
+      <ul class="main-nav__user-nav user-nav">
+        <li class="user-nav__item">Поиск</li>
+        <li class="user-nav__item">Вход</li>
+        <li class="user-nav__item">Корзина</li>
+      </ul>
+    </nav>
+    </header>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+    <main>
+      <h1 class="title visually-hidden">Gllacy Shop: магазин мороженого</h1>
+      <section class="advantages">
+        <h2 class="advantages__title">Магазин Глейси - это онлайн- и офлайн-магазин по продаже мороженного собственного производства на развес</h2>
+        <p class="advantages__text">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+        <p class="advantages__text">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </p>
+        <p class="advantages__text">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+        <p class="advantages__text">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+      </section>
+      <article class="blog-news">
+        <h2 class="visually-hidden">Новостной блог</h2>
+        <h3 class="blog-news__title">Новое в нашем блоге</h3>
+        <p class="blog-news__text"><a class="blog-news__link">10 способов сервировки фруктовых щербетов к столу</a></p>
+      </article>
+      <section class="subscription">
+        <h2 class="visually-hidden">Почтовая рассылка</h2>
+        <p class="subscription__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+        <button class="subscription__btn button">Отправить</button>
+      </section>
+    </main>
 
+    <footer class="main-footer">
+      <ul class="main-footer__social">
+        <li class="main-footer__social-item"><a class="main-footer__social-link">Твиттер</a></li>
+        <li class="main-footer__social-item"><a class="main-footer__social-link">Инстаграм</a></li>
+        <li class="main-footer__social-item"><a class="main-footer__social-link">Фейсбук</a></li>
+        <li class="main-footer__social-item"><a class="main-footer__social-link">Вконтакте</a></li>
+      </ul>
+      <ul class="main-footer__info">
+        <li class="main-footer__info-item"><a class="main-footer__info-link"><b>Для поставщиков</b></a></li>
+        <li class="main-footer__info-item"><a class="main-footer__info-link">О производстве</a></li>
+        <li class="main-footer__info-item"><a class="main-footer__info-link">Наши документы</a></li>
+        <li class="main-footer__info-item"><a class="main-footer__info-link">Экологические стандарты</a></li>
+      </ul>
+      <div class="main-footer__developers">
+        <a class="main-footer__developers-link"><img src="img/academy-logo.png"></a>
+        <p class="main-footer__developers-text">Сделано в <a class="main-footer__developers-link">HTML Академии</a> 2017</p>
+      </div>
+    </footer>
   </body>
 </html>
