@@ -9,7 +9,7 @@
       <a class="main-header__logo">
         <img src="img/logo-gllacy.svg" alt="Логотип мазазина мороженого Глейси">
       </a>
-      <nav class="main-nav">
+      <nav class="main-header__nav main-nav">
       <ul class="main-nav__list">
         <li class="main-nav__item">
           <a class="main-nav__link">Каталог</a>
@@ -34,42 +34,42 @@
     </header>
 
     <main>
-      <h1 class="title visually-hidden">Gllacy Shop: каталог магазина мороженого</h1>
+      <h1 class="visually-hidden">Gllacy Shop: каталог магазина мороженого</h1>
       <h2 class="title">Сливочное мороженое</h2>
       <ul>
-        <li><a>Главная</a></li>
-        <li><a>Каталог</a></li>
-        <li><a>Сливочное</a></li>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="cataloge.html">Каталог</a></li>
+        <li><a href="#">Сливочное</a></li>
       </ul>
       <section class="forms">
         <!-- placeholder -->
       </section>
       <section class="catalogue">
-        <div class="catalogue__item">
-          <p class="catalogue__item-text">Сливочное</p>
-          <img src="ice-cream.png">
-          <p class="catalogue__item-price">310 рублей<span class="catalogue__item-weight">/кг</span></p>
-        </div>
+        <article class="catalogue__item product-card">
+          <p class="product-card__text">Сливочное</p>
+          <img class="product-card__image" src="ice-cream.png">
+          <p class="product-card__price">310 рублей<span class="product-card__weight">/кг</span></p>
+        </article>
 
       </section>
     </main>
 
     <footer class="main-footer">
-      <ul class="main-footer__social">
-        <li class="main-footer__social-item"><a class="main-footer__social-link">Твиттер</a></li>
-        <li class="main-footer__social-item"><a class="main-footer__social-link">Инстаграм</a></li>
-        <li class="main-footer__social-item"><a class="main-footer__social-link">Фейсбук</a></li>
-        <li class="main-footer__social-item"><a class="main-footer__social-link">Вконтакте</a></li>
+      <ul class="main-footer__social social">
+        <li class="social__item"><a class="social__link" href="#">Твиттер</a></li>
+        <li class="social__item"><a class="social__link" href="#">Инстаграм</a></li>
+        <li class="social__item"><a class="social__link" href="#">Фейсбук</a></li>
+        <li class="social__item"><a class="social__link" href="#">Вконтакте</a></li>
       </ul>
-      <ul class="main-footer__info">
-        <li class="main-footer__info-item"><a class="main-footer__info-link"><b>Для поставщиков</b></a></li>
-        <li class="main-footer__info-item"><a class="main-footer__info-link">О производстве</a></li>
-        <li class="main-footer__info-item"><a class="main-footer__info-link">Наши документы</a></li>
-        <li class="main-footer__info-item"><a class="main-footer__info-link">Экологические стандарты</a></li>
+      <ul class="main-footer__info info">
+        <li class="info__item"><a class="info__link" href="#"><b>Для поставщиков</b></a></li>
+        <li class="info__item"><a class="info__link" href="#">О производстве</a></li>
+        <li class="info__item"><a class="info__link" href="#">Наши документы</a></li>
+        <li class="info__item"><a class="info__link" href="#">Экологические стандарты</a></li>
       </ul>
-      <div class="main-footer__developers">
-        <a class="main-footer__developers-link"><img src="img/academy-logo.png"></a>
-        <p class="main-footer__developers-text">Сделано в <a class="main-footer__developers-link">HTML Академии</a> 2017</p>
+      <div class="main-footer__developers developers">
+        <a class="developers__link" href="#"><img src="img/academy-logo.png"></a>
+        <p class="developers__text">Сделано в <a class="developers__link" href="#">HTML Академии</a> 2017</p>
       </div>
     </footer>
   </body>
