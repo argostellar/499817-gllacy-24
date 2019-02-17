@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Каталог Глейси</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -22,8 +23,34 @@
         </li>
       </ul>
       <ul class="main-nav__user-nav user-nav">
-        <li class="user-nav__item">Поиск</li>
-        <li class="user-nav__item">Вход</li>
+        <li class="user-nav__item">Поиск
+          <div>
+            <form>
+              <input type="search" name="search" placeholder="Что ищем?">
+            </form>
+          </div>
+        </li>
+        <li class="user-nav__item">Вход
+          <div>
+            <form>
+              <p>
+                <label for="email">Электронная почта</label>
+                <input type="email" name="e-mail" id="email">
+              </p>
+              <p>
+                <label for="password">Пароль</label>
+                <input type="password" name="password" id="password">
+              </p>
+              <button type="submit">Войти</button>
+            </form>
+            <p>
+              <a href="#">Забыли пароль?</a>
+            </p>
+            <p>
+              <a href="#">Новая регистрация</a>
+            </p>
+          </div>
+        </li>
         <li class="user-nav__item">2 товара
           <div class="user-nav__wrapper">
             <ul class="cart">
