@@ -93,6 +93,10 @@ body {
   display: flex;
   flex-direction: column;
   width: 1146px;
+  height: 306px;
+
+  padding: 5px;
+  margin: 20px auto;
 
   background-image: url('../img/bg-waffle.jpg');
   background-repeat: cover;
@@ -120,11 +124,24 @@ body {
   flex-direction: row;
 }
 
+.page-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .blog-news {
   width: 560px;
   height: 221px;
 
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 13px;
+  margin-left: auto;
+
+  padding: 1px;
+
   background-image: url('../img/bg-strawberry.jpg');
+  background-repeat: no-repeat;
 
   color: #323232;
 
@@ -146,6 +163,13 @@ body {
 .subscription {
   width: 560px;
   height: 221px;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: auto;
+  margin-left: 13px;
+
+  padding: 1px;
 
   background-color: #f8f7f4;
 
@@ -208,6 +232,24 @@ body {
 
 
 /* <--------------Catalogue -------------> */
+
+.path {
+  display: flex;
+
+  list-style: none;
+}
+
+.path__item {
+  margin: 5px;
+
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.path__link {
+  color: #ffffff;
+}
 
 .user-nav__cart-wrapper {
   display: none;
