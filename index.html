@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -30,15 +32,15 @@
         </li>
       </ul>
       <ul class="main-nav__user-nav user-nav">
-        <li class="user-nav__item">Поиск
-          <div>
+        <li class="user-nav__item"><p class="visually-hidden">Поиск</p>
+          <div class="user-nav__popup">
             <form>
               <input type="search" name="search" placeholder="Что ищем?">
             </form>
           </div>
         </li>
         <li class="user-nav__item">Вход
-          <div>
+          <div class="user-nav__popup">
             <form>
               <p>
                 <label for="email">Электронная почта</label>
@@ -67,10 +69,16 @@
       <h1 class="visually-hidden">Gllacy Shop: магазин мороженого</h1>
       <section class="advantages">
         <h2 class="advantages__title">Магазин Глейси - это онлайн- и офлайн-магазин по продаже мороженного собственного производства на развес</h2>
+        <div class="advantages__main-wrapper">
+        <div class="advantages__wrapper">
         <p class="advantages__text">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
         <p class="advantages__text">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </p>
+        </div>
+        <div class="advantages__wrapper">
         <p class="advantages__text">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
         <p class="advantages__text">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+        </div>
+        </div>
       </section>
       <article class="blog-news">
         <h2 class="blog-news__title">Новое в нашем блоге</h2>
@@ -100,8 +108,8 @@
         <li class="info__item"><a class="info__link" href="#">Экологические стандарты</a></li>
       </ul>
       <div class="main-footer__developers developers">
-        <a class="developers__link" href="#"><img src="img/academy-logo.png"></a>
-        <p class="developers__text">Сделано в <a class="developers__link" href="#">HTML Академии</a> 2017</p>
+        <a class="developers__link" href="#"><img src="img/logo-htmlacademy-small.svg"></a>
+        <p class="developers__text">Сделано в <a class="developers__link" href="#">HTML Академии</a> &copy; 2019</p>
       </div>
     </footer>
     <section class="popup">

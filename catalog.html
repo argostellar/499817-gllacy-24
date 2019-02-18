@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Каталог Глейси</title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
-      <a class="main-header__logo">
+      <a class="main-header__logo" href="index.html">
         <img src="img/logo-gllacy.svg" alt="Логотип мазазина мороженого Глейси">
       </a>
       <nav class="main-header__nav main-nav">
@@ -23,15 +25,15 @@
         </li>
       </ul>
       <ul class="main-nav__user-nav user-nav">
-        <li class="user-nav__item">Поиск
-          <div>
+        <li class="user-nav__item"><p class="visually-hidden">Поиск</p>
+          <div class="user-nav__popup">
             <form>
               <input type="search" name="search" placeholder="Что ищем?">
             </form>
           </div>
         </li>
         <li class="user-nav__item">Вход
-          <div>
+          <div class="user-nav__popup">
             <form>
               <p>
                 <label for="email">Электронная почта</label>
@@ -52,7 +54,7 @@
           </div>
         </li>
         <li class="user-nav__item">2 товара
-          <div class="user-nav__wrapper">
+          <div class="user-nav__cart-wrapper">
             <ul class="cart">
               <li class="cart__item">
                 <ul class="row">
@@ -78,27 +80,32 @@
       </ul>
     </nav>
     <div class="main-header__wrapper">
-      <p>С 10 до 20, ежедневно</p>
-      <p>8 812 450-25-25</p>
+      <p class="main-header__text">С 10 до 20, ежедневно</p>
+      <p class="main-header__text main-header__text--phone">8 812 450-25-25</p>
     </div>
     </header>
 
     <main>
       <h1 class="visually-hidden">Gllacy Shop: каталог магазина мороженого</h1>
       <h2 class="title">Сливочное мороженое</h2>
-      <ul>
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="cataloge.html">Каталог</a></li>
-        <li><a href="#">Сливочное</a></li>
+      <ul class="path">
+        <li class="path__item"><a class="path__link" href="index.html">Главная</a></li>
+        <li class="path__item"><a class="path__link" href="cataloge.html">Каталог</a></li>
+        <li class="path__item"><a class="path__link" href="#">Сливочное</a></li>
       </ul>
       <section class="forms">
         <!-- placeholder -->
       </section>
       <section class="catalogue">
         <article class="catalogue__item product-card">
-          <p class="product-card__text">Сливочное</p>
-          <img class="product-card__image" src="ice-cream.png">
+          <p class="product-card__text">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+          <img class="product-card__image" src="img/ice-cream-1.png">
           <p class="product-card__price">310 рублей<span class="product-card__weight">/кг</span></p>
+        </article>
+        <article class="catalogue__item product-card">
+          <p class="product-card__text">Сливочное</p>
+          <img class="product-card__image" src="img/ice-cream-2.png">
+          <p class="product-card__price">380 рублей<span class="product-card__weight">/кг</span></p>
         </article>
 
       </section>
@@ -119,7 +126,7 @@
       </ul>
       <div class="main-footer__developers developers">
         <a class="developers__link" href="#"><img src="img/academy-logo.png"></a>
-        <p class="developers__text">Сделано в <a class="developers__link" href="#">HTML Академии</a> 2017</p>
+        <p class="developers__text">Сделано в <a class="developers__link" href="#">HTML Академии</a> &copy; 2019</p>
       </div>
     </footer>
   </body>
