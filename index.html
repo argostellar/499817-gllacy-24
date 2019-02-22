@@ -9,7 +9,7 @@
   </head>
   <body>
     <header class="main-header">
-      <a class="main-header__logo" href="#">
+      <a class="main-header__logo">
         <img src="img/logo-gllacy.svg" alt="Логотип мазазина мороженого Глейси">
       </a>
       <nav class="main-header__nav main-nav">
@@ -25,10 +25,10 @@
           </ul>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link">Доставка и оплата</a>
+          <a class="main-nav__link" href="#">Доставка и оплата</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link">О Компании</a>
+          <a class="main-nav__link" href="#">О Компании</a>
         </li>
       </ul>
       <ul class="main-nav__user-nav user-nav">
@@ -52,12 +52,10 @@
               </p>
               <button type="submit">Войти</button>
             </form>
-            <p>
-              <a href="#">Забыли пароль?</a>
-            </p>
-            <p>
-              <a href="#">Новая регистрация</a>
-            </p>
+              <div class="user-nav__links-wrapper">
+                <a class="user-nav__link" href="#">Забыли пароль?</a>
+                <a class="user-nav__link" href="#">Новая регистрация</a>
+              </div>
           </div>
         </li>
         <li class="user-nav__item">Корзина</li>
@@ -96,27 +94,27 @@
       </div>
     </main>
 
-    <footer class="main-footer">
-      <ul class="main-footer__social social">
+    <footer class="main-footer border">
+      <ul class="main-footer__social social border">
         <li class="social__item"><a class="social__link" href="#">Твиттер</a></li>
         <li class="social__item"><a class="social__link" href="#">Инстаграм</a></li>
         <li class="social__item"><a class="social__link" href="#">Фейсбук</a></li>
         <li class="social__item"><a class="social__link" href="#">Вконтакте</a></li>
       </ul>
-      <ul class="main-footer__info info">
-        <li class="info__item"><a class="info__link" href="#"><b>Для поставщиков</b></a></li>
+      <ul class="main-footer__info info border">
+        <li class="info__item info__item--heart"><a class="info__link" href="#"><b>Для поставщиков</b></a></li>
         <li class="info__item"><a class="info__link" href="#">О производстве</a></li>
         <li class="info__item"><a class="info__link" href="#">Наши документы</a></li>
         <li class="info__item"><a class="info__link" href="#">Экологические стандарты</a></li>
       </ul>
-      <div class="main-footer__developers developers">
-        <a class="developers__link" href="#"><img src="img/logo-htmlacademy-small.svg"></a>
+      <div class="main-footer__developers developers border">
+        <a class="developers__link" href="#"><img src="img/logo-htmlacademy-small.svg" width="108" height="39"></a>
         <p class="developers__text">Сделано в <a class="developers__link" href="#">HTML Академии</a> &copy; 2019</p>
       </div>
     </footer>
     <section class="popup">
       <h2 class="title">Мы обязательно вам ответим!</h2>
-      <button class="popup__btn">Закрыть</button>
+      <button class="popup__btn" type="button">Закрыть</button>
       <form>
         <input type="text" name="name" placeholder="Как вас зовут?">
         <input type="email" name="e-mail" placeholder="Ваша почта для ответа?">
