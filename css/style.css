@@ -137,6 +137,90 @@ img {
 
 /* <------------------------------------- Main Page -----------------------------------------> */
 
+.promo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin: 0 auto;
+}
+
+.promo__item {
+  margin: 13px;
+
+  min-height: 229px;
+  min-width: 560px;
+
+  border-radius: 15px;
+
+  position: relative;
+}
+
+.promo__item--raspberry {
+  background-color: #85172c;
+  background-image: url('../img/bg-raspberry.jpg');
+  background-repeat: no-repeat;
+}
+
+.promo__item--chocolate {
+  background-color: #482c1f;
+  background-image: url('../img/bg-chocolate.jpg');
+  background-repeat: no-repeat;
+}
+
+.promo__title {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: bold;
+
+  margin-top: 18px;
+  margin-left: 18px;
+}
+
+.promo__text {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+
+  margin-left: 15px;
+
+  max-width: 520px;
+}
+
+.promo__button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+
+.hit-sales {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-right: 27px;
+  margin-left: 27px;
+}
+
+.hit-sales__item {
+  position: relative;
+  width: 25%;
+}
+
+.hit-sales__item::before {
+  content: '';
+
+  width: 61px;
+  height: 61px;
+
+  position: absolute;
+  top: 10px;
+
+  background-image: url(../img/icon-hit.svg);
+  background-repeat: no-repeat;
+}
+
 .advantages {
   display: flex;
   flex-direction: column;
@@ -159,17 +243,87 @@ img {
   line-height: 30px;
   font-weight: 500;
   color: #323232;
+
+  padding-left: 20px;
 }
 
 .advantages__text {
+  position: relative;
+
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
+
+  max-width: 485px;
+
+
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 20px;
+  padding-left: 50px;
 }
+
+.advantages__text--ice::before {
+  content: "";
+
+  position: absolute;
+  left: -5px;
+  top: -15px;
+
+  width: 49px;
+  height: 49px;
+
+  background-image: url(../img/icon-ice-cream.svg);
+  background-repeat: no-repeat;
+}
+
+.advantages__text--leaf::before {
+  content: "";
+
+  position: absolute;
+  left: -5px;
+  top: -15px;
+
+  width: 49px;
+  height: 49px;
+
+  background-image: url(../img/icon-leaf.svg);
+  background-repeat: no-repeat;
+}
+
+.advantages__text--cow::before {
+  content: "";
+
+  position: absolute;
+  left: -5px;
+  top: -15px;
+
+  width: 49px;
+  height: 49px;
+
+  background-image: url(../img/icon-cow.svg);
+  background-repeat: no-repeat;
+}
+
+.advantages__text--degree::before {
+  content: "";
+
+  position: absolute;
+  left: -5px;
+  top: -15px;
+
+  width: 49px;
+  height: 49px;
+
+  background-image: url(../img/icon-thermometer.svg);
+  background-repeat: no-repeat;
+}
+
 
 .advantages__main-wrapper {
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
 }
 
 .page-wrapper {
@@ -186,8 +340,6 @@ img {
   margin-right: 13px;
   margin-left: auto;
 
-  padding: 1px;
-
   background-image: url('../img/bg-strawberry.jpg');
   background-repeat: no-repeat;
 
@@ -201,9 +353,9 @@ img {
   font-weight: 500;
   line-height: 22px;
 
-  padding-left: 19px;
-  padding-top: 25px;
-  padding-bottom: 8px;
+  margin-left: 19px;
+  margin-top: 25px;
+  margin-bottom: 8px;
 }
 
 .blog-news__text {
@@ -211,7 +363,7 @@ img {
   font-weight: bold;
   line-height: 30px;
 
-  padding-left: 20px;
+  margin-left: 20px;
 
   width: 285px;
 }
@@ -231,10 +383,6 @@ img {
   margin-right: auto;
   margin-left: 13px;
 
-  padding: 1px;
-
-  background-color: ;
-
   border-radius: 13px;
 
   color: #5a5a5a;
@@ -244,7 +392,7 @@ img {
   border-width: 5px;
   border-style: solid;
   border-color: lightblue;
-  border-image-source: url('../img/bg-letter.png');
+  border-image-source: url('../img/bg-letter.svg');
   border-image-repeat: stretch stretch;
   border-image-slice: 15;
   border-image-width: 10px;
@@ -274,7 +422,7 @@ img {
 }
 
 .main-footer__info {
-  /* empty */
+  background-color: rgba(240, 249, 33, 0.3);
 }
 
 .main-footer__developers {
@@ -304,11 +452,15 @@ img {
 .info__item {
   margin: 0 15px;
 
+  border: 1px solid blue;
+
+  position: relative;
 }
 
 .info__item--heart::before {
-  content: '🖤';
-  margin-left: -10px;
+  content: "🖤";
+
+  margin-left: -20px;
 }
 
 .info__link {

@@ -65,16 +65,53 @@
 
     <main>
       <h1 class="visually-hidden">Gllacy Shop: магазин мороженого</h1>
+      <section class="page-slider">
+        <!---- Placeholder ------>
+      </section>
+      <section class="promo">
+        <div class="promo__item promo__item--raspberry">
+          <h2 class="promo__title">Малинка даром!</h2>
+          <p class="promo__text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+          <button class="promo__button button" type="button">Хочу варенье!</button>
+        </div>
+        <div class="promo__item promo__item--chocolate">
+          <h2 class="promo__title">Шоколадки даром!</h2>
+          <p class="promo__text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+          <button class="promo__button button" type="button">Хочу шоколадки!</button>
+        </div>
+      </section>
+      <section class="hit-sales">
+        <article class="hit-sales__item product-card">
+          <p class="product-card__text">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+          <img class="product-card__image" src="img/ice-cream-1.png">
+          <p class="product-card__price">310₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+        </article>
+        <article class="hit-sales__item product-card">
+          <p class="product-card__text">Сливочно-кофейное с кусочками шоколада</p>
+          <img class="product-card__image" src="img/ice-cream-2.png">
+          <p class="product-card__price">380₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+        </article>
+        <article class="hit-sales__item product-card">
+          <p class="product-card__text">Сливочно-клубничное с присыпкой из белого шоколада</p>
+          <img class="product-card__image" src="img/ice-cream-3.png">
+          <p class="product-card__price">355₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+        </article>
+        <article class="hit-sales__item product-card">
+          <p class="product-card__text">Сливочное крем-брюле с карамельной подливкой</p>
+          <img class="product-card__image" src="img/ice-cream-4.png">
+          <p class="product-card__price">415₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+        </article>
+      </section>
       <section class="advantages">
         <h2 class="advantages__title">Магазин Глейси - это онлайн- и офлайн-магазин по продаже мороженного собственного производства на развес</h2>
         <div class="advantages__main-wrapper">
         <div class="advantages__wrapper">
-        <p class="advantages__text">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
-        <p class="advantages__text">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </p>
+        <p class="advantages__text advantages__text--ice">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+        <p class="advantages__text advantages__text--leaf">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </p>
         </div>
         <div class="advantages__wrapper">
-        <p class="advantages__text">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
-        <p class="advantages__text">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+        <p class="advantages__text advantages__text--cow">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+        <p class="advantages__text advantages__text--degree">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
         </div>
         </div>
       </section>
@@ -90,6 +127,17 @@
           <input type="email" name="email" placeholder="Электронная почта">
           <button class="subscription__btn button" type="submit">Отправить</button>
         </form>
+      </section>
+      <section class="map">
+        <h2 class="visually-hidden"></h2>
+        <div class="map__info">
+            <p class="map__text">Адрес главного офиса и офлайн-магазина:</p>
+            <p class="map__text map__text--big">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+            <p class="map__text">Для заказов по телефону:</p>
+            <p class="map__text map__text--big">8 812 450-25-25</p>
+            <p class="map__text">(с 10 до 20 ежедневно)</p>
+            <a class="map__button button">Форма обратной связи</a>
+        </div>
       </section>
       </div>
     </main>
