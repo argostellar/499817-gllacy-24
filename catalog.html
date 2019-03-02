@@ -58,13 +58,13 @@
           <div class="cart">
             <table class="cart__table">
               <tr class="cart__item row">
-                <td class="row__item"><img src="img/ice-cream-1.png" width="33" height="33"></td>
+                <td class="row__item"><img src="img/ice-cream-1.png" width="33" height="33" alt="Миниатюра товара: Пломбир с апельсиновым джемом"></td>
                 <td class="row__item">Пломбир с апельсиновым джемом</td>
                 <td class="row__item">1,5 кг х 200 руб.</td>
                 <td class="row__item">300 руб.</td>
               </tr>
               <tr class="cart__item row">
-                <td class="row__item"><img src="img/ice-cream-3.png" width="33" height="33"></td>
+                <td class="row__item"><img src="img/ice-cream-3.png" width="33" height="33" alt="Миниатюра товара: Клубничный пломбир с присыпкой из белого шоколада"></td>
                 <td class="row__item">Клубничный пломбир с присыпкой из белого шоколада</td>
                 <td class="row__item">1,5 кг х 300 руб.</td>
                 <td class="row__item">450 руб.</td>
@@ -92,8 +92,8 @@
     <section class="forms container">
       <form>
         <div>
-          <label>Сортировка:</label>
-          <select name="sorting">
+          <label for="sorting">Сортировка:</label>
+          <select name="sorting" id="sorting">
             <option value="по популярности">по популярности</option>
             <option value="сначала недорогие">сначала недорогие</option>
             <option value="сначала дорогие">сначала дорогие</option>
@@ -101,11 +101,11 @@
           </select>
         </div>
         <div>
-          <label>Цена:</label>
+          <p class="forms__price">Цена:</p>
           <input type="text" name="price" value="100 руб."> - <input type="text" name="price" value="500 руб.">
         </div>
         <div>
-          <label>Жирность:</label>
+          <p class="forms__fat-content">Жирность:</p>
           <input type="radio" name="fat content" value="0%" id="fat-content-0%">
           <label for="fat-content-0%">0%</label>
           <input type="radio" name="fat content" value="до 10%" id="fat-content-to-10%">
@@ -116,16 +116,16 @@
           <label for="fat-content-over-30%">выше 30%</label>
         </div>
         <div>
-          <label for="fillers">Наполнители:</label>
-          <input type="checkbox" name="" id="filler-chocolate">
+          <p class="forms__fillers">Наполнители:</p>
+          <input type="checkbox" name="chocolate" id="filler-chocolate">
           <label for="filler-chocolate">шоколадные</label>
-          <input type="checkbox" name="" id="filler-sugar-powder">
+          <input type="checkbox" name="sugar-powder" id="filler-sugar-powder">
           <label for="filler-sugar-powder">сахарные присыпки</label>
-          <input type="checkbox" name="" id="filler-fruit">
+          <input type="checkbox" name="fruit" id="filler-fruit">
           <label for="filler-fruit">фрукты</label>
-          <input type="checkbox" name="" id="filler-syrup">
+          <input type="checkbox" name="syrup" id="filler-syrup">
           <label for="filler-syrup">сиропы</label>
-          <input type="checkbox" name="" id="filler-jam">
+          <input type="checkbox" name="jam" id="filler-jam">
           <label for="filler-jam">джемы</label>
         </div>
         <button type="submit">Применить</button>
