@@ -58,7 +58,17 @@ img {
 
 }
 
+.container {
+  margin: 0 auto;
+  padding: 0 5px;
+
+  width: 1200px;
+  height: auto;
+}
+
 /* <-------------------------------------- Header ---------------------------------------->*/
+
+/* <--- MAIN-HEADER ---> */
 
 .main-header {
   display: flex;
@@ -67,6 +77,13 @@ img {
 
   margin-right: 27px;
   margin-left: 27px;
+
+  border: 2px solid red;
+}
+
+.main-header__wrapper {
+  margin-bottom: -200px;
+  border: 2px solid red;
 }
 
 .main-header__text {
@@ -88,6 +105,8 @@ img {
   margin-right: auto;
 }
 
+/* <--- MAIN-NAV ---> */
+
 .main-nav {
   display: flex;
   width: 100%
@@ -104,6 +123,9 @@ img {
   flex-direction: row;
   justify-content: space-between;
   list-style: none;
+
+  margin: 0;
+  padding: 0;
 }
 
 .main-nav__item {
@@ -117,6 +139,17 @@ img {
   text-decoration: underline;
   color: #ffffff;
 }
+
+.main-nav__link--current {
+  min-height: 32px;
+
+  background-color: #cb765f;
+  border-radius: 13px;
+
+  text-decoration: none;
+}
+
+/* <--- USER-NAV ---> */
 
 .user-nav {
   display: flex;
@@ -137,23 +170,50 @@ img {
 
 /* <------------------------------------- Main Page -----------------------------------------> */
 
+/* <--- SLIDER ---> */
+
+.slider {
+  display: flex;
+  flex-direction: column;
+}
+
+.slider__image {}
+
+.slider__image--hidden {
+  display: none;
+}
+
+.slider__title {
+  font-size: 60px;
+  line-height: 60.35px;
+  font-weight: 700;
+}
+
+.slider__ctrl-wrapper {}
+
+.slider__ctrl-btn {}
+
+.slider__button {}
+
+/* <--- PROMO ---> */
+
 .promo {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
-  margin: 0 auto;
 }
 
 .promo__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   margin: 13px;
 
   min-height: 229px;
   min-width: 560px;
 
   border-radius: 15px;
-
-  position: relative;
 }
 
 .promo__item--raspberry {
@@ -175,6 +235,7 @@ img {
 
   margin-top: 18px;
   margin-left: 18px;
+  margin-bottom: 0;
 }
 
 .promo__text {
@@ -183,24 +244,23 @@ img {
   font-weight: bold;
 
   margin-left: 15px;
+  margin-bottom: auto;
 
   max-width: 520px;
 }
 
 .promo__button {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
+  margin-left: auto;
+  margin-right: 18px;
+  margin-bottom: 15px;
 }
 
+/* <--- HIT-SALES ---> */
 
 .hit-sales {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
-  margin-right: 27px;
-  margin-left: 27px;
 }
 
 .hit-sales__item {
@@ -215,11 +275,13 @@ img {
   height: 61px;
 
   position: absolute;
-  top: 10px;
+  top: 1px;
 
   background-image: url(../img/icon-hit.svg);
   background-repeat: no-repeat;
 }
+
+/* <--- ADVANTAGES ---> */
 
 .advantages {
   display: flex;
@@ -230,6 +292,7 @@ img {
   padding: 5px;
   margin: 20px auto;
 
+  background-color: #ebdfc5;
   background-image: url('../img/bg-waffle.jpg');
   background-size: cover;
 
@@ -326,12 +389,20 @@ img {
   flex-wrap: nowrap;
 }
 
+/* <--- PAGE-WRAPPER ---> */
+
 .page-wrapper {
   display: flex;
   justify-content: space-between;
 }
 
+/* <--- BLOG-NEWS ---> */
+
 .blog-news {
+  dispaly: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   width: 560px;
   min-height: 221px;
 
@@ -340,8 +411,10 @@ img {
   margin-right: 13px;
   margin-left: auto;
 
-  background-image: url('../img/bg-strawberry.jpg');
+  background-color: #ffffff;
+  background-image: url('../img/bg-strawberry-big.jpg');
   background-repeat: no-repeat;
+  background-position: 15% 40%;
 
   color: #323232;
 
@@ -355,7 +428,6 @@ img {
 
   margin-left: 19px;
   margin-top: 25px;
-  margin-bottom: 8px;
 }
 
 .blog-news__text {
@@ -364,6 +436,8 @@ img {
   line-height: 30px;
 
   margin-left: 20px;
+  margin-bottom: auto;
+  margin-top: 0;
 
   width: 285px;
 }
@@ -373,6 +447,8 @@ img {
   text-decoration: underline;
   vertical-align: top;
 }
+
+/* <--- SUBSCRIPTION ---> */
 
 .subscription {
   width: 560px;
@@ -406,15 +482,58 @@ img {
   padding: 20px;
 }
 
+/* <------- MAP -------> */
+
+.map {
+  position: relative;
+
+  width: 100%;
+  min-height: 430px;
+
+  background-image: url('../img/bg-map.jpg');
+  background-repeat: no-repeat;
+  background-size: 1250px 430px;
+}
+
+.map__text {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #323232;
+
+  margin: 5px 25px;
+}
+
+.map__text--big {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.map__info {
+  position: absolute;
+
+  bottom: 50px;
+  right: 30px;
+
+  width: 302px;
+  height: 305px;
+
+  background-color: #ffffff;
+
+  border-radius: 13px;
+}
+
+.map__button {
+  margin: 30px 25px;
+}
+
 /* <------------------------------------ Footer -----------------------------------------> */
 
 .main-footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
-  margin-right: 27px;
-  margin-left: 27px;
 }
 
 .main-footer__social {
@@ -422,12 +541,14 @@ img {
 }
 
 .main-footer__info {
-  background-color: rgba(240, 249, 33, 0.3);
+  /*none*/
 }
 
 .main-footer__developers {
   margin-left: auto;
 }
+
+/* <--- SOCIAL ---> */
 
 .social {
   display: flex;
@@ -439,6 +560,8 @@ img {
   margin: 5px;
 }
 
+/* <--- INFO ---> */
+
 .info {
   display: flex;
   flex-direction: column;
@@ -447,6 +570,10 @@ img {
   list-style: none;
 
   max-height: 50px;
+  width: 320px;
+
+  margin: 0;
+  padding: 0;
 }
 
 .info__item {
@@ -457,19 +584,33 @@ img {
   position: relative;
 }
 
-.info__item--heart::before {
-  content: "🖤";
-
-  margin-left: -20px;
-}
-
 .info__link {
   color: #ffffff;
   text-decoration: underline;
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
+
+  position: relative;
 }
+
+.info__link--heart::before {
+  content: "🖤";
+
+  position: absolute;
+
+  left: -20px;
+}
+
+.info__item--heart::before {
+  content: "🖤";
+
+  position: absolute;
+
+  left: -20px;
+}
+
+/* <--- DEVELOPERS ---> */
 
 .developers {
   display: flex;
@@ -490,13 +631,24 @@ img {
 
 /* <------------------------------------Catalogue -----------------------------------> */
 
-.path {
+.page-title {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: bold;
+}
+
+/* <--- BREADCRUMBS ---> */
+
+.breadcrumbs {
   display: flex;
 
   list-style: none;
+
+  margin: 0;
+  padding: 0;
 }
 
-.path__item {
+.breadcrumbs__item {
   margin: 5px;
 
   font-size: 14px;
@@ -504,13 +656,25 @@ img {
   font-weight: 400;
 }
 
-.path__link {
+.breadcrumbs__link {
   color: #ffffff;
+
+  position: relative;
 }
+
+.breadcrumbs__link::after {
+  content: '»';
+
+  position: absolute;
+}
+
+/* <--- USER-NAV CART-WRAPPER ---> */
 
 .user-nav__cart-wrapper {
   display: none;
 }
+
+/* <--- CATALOGUE ---> */
 
 .catalogue {
   display: flex;
@@ -518,25 +682,34 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
 
-  margin-left: 27px;
-  margin-right: 27px;
+  margin: 0;
+  padding: 0;
 }
 
 .catalogue__item {
   width: 25%;
 }
 
+/* <--- PRODUCT-CARD ---> */
+
 .product-card__text {
   font-size: 16px;
   font-weight: 500;
   line-height: 22px;
   text-decoration: underline;
+  text-align: center;
+
+  margin-top: -25px;
+
+  width: 267px;
 }
 
 .product-card__price {
   font-size: 45px;
   line-height: 45px;
   font-weight: bold;
+
+  margin-top: -65px;
 }
 
 .product-card__weight {
@@ -544,6 +717,82 @@ img {
   line-height: 45px;
   font-weight: bold;
 }
+
+/* <--- PAGINATION ---> */
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pagination__wrapper {
+  margin-left: auto;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pagination__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pagination__item {
+  width: 26px;
+  height: 26px;
+  border: 2px solid red;
+}
+
+.pagination__item--current {
+  color: #353535;
+  background-color: #f2f5f3;
+  border-radius: 50%;
+}
+
+.pagination__link {
+  display: block;
+
+  width: 26px;
+  height: 26px;
+
+  text-decoration: none;
+
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.pagination__link:hover {
+  background-color: rgba(255,255,255,0.4);
+  border-radius: 50%;
+}
+
+.pagination__link:active {
+  color: #353535;
+  background-color: #f2f5f3;
+  border-radius: 50%;
+}
+
+.pagination__link--current {
+  color: #353535;
+  background-color: #f2f5f3;
+  border-radius: 50%;
+}
+
+.pagination__button {
+  display: block;
+  border: 2px solid red;
+}
+
+.pagination__button--inactive {}
 
 
 /* <---------------------------------- Technical classes ----------------------------------> */
@@ -556,3 +805,5 @@ img {
 .border {
   border: 2px solid red;
 }
+
+/* <--- EMPTY ---> */
