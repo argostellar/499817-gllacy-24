@@ -27,15 +27,22 @@
         </li>
       </ul>
       <ul class="main-nav__user-nav user-nav">
-        <li class="user-nav__item">
+        <li class="user-nav__item user-nav__item--search">
           <p class="visually-hidden">Поиск</p>
+          <span class="user-nav__search-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17px" height="17px" viewBox="0 0 17 17" enable-background="new 0 0 17 17" xml:space="preserve">
+              <g id="Layer_2">
+                <path class="user-nav__search-icon-image" fill="#FFFFFF" d="M16.958,15.527L11.75,10.32C12.533,9.247,13,7.93,13,6.5C13,2.91,10.09,0,6.5,0S0,2.91,0,6.5
+    S2.91,13,6.5,13c1.438,0,2.763-0.473,3.839-1.263l5.205,5.204L16.958,15.527z M6.5,11C4.019,11,2,8.981,2,6.5S4.019,2,6.5,2
+    S11,4.019,11,6.5S8.981,11,6.5,11z" />
+              </g>
+            </svg></span>
           <div class="user-nav__popup">
             <form>
               <input type="search" name="search" placeholder="Что ищем?">
             </form>
           </div>
         </li>
-        <li class="user-nav__item">Вход
+        <li class="user-nav__item user-nav__item--enter">Вход
           <div class="user-nav__popup">
             <form>
               <p>
@@ -54,7 +61,7 @@
             </div>
           </div>
         </li>
-        <li class="user-nav__item">2 товара
+        <li class="user-nav__item user-nav__item--cart">2 товара
           <div class="cart">
             <table class="cart__table">
               <tr class="cart__item row">
@@ -94,39 +101,49 @@
         <div class="forms__sorting">
           <label class="forms__legend" for="sorting">Сортировка:</label>
           <select name="sorting" id="sorting">
-            <option value="по популярности">по популярности</option>
+            <option value="по популярности" selected>по популярности</option>
             <option value="сначала недорогие">сначала недорогие</option>
             <option value="сначала дорогие">сначала дорогие</option>
             <option value="по жирности">по жирности</option>
           </select>
         </div>
         <div class="forms__price">
-          <p class="forms__legend">Цена:</p>
-          <input type="text" name="price" value="100 руб."> - <input type="text" name="price" value="500 руб.">
+          <fieldset>
+            <legend class="forms__legend">Цена:</legend>
+            <input type="text" name="price" value="100 руб."> - <input type="text" name="price" value="500 руб.">
+          </fieldset>
         </div>
         <div class="forms__fat-content">
-          <legend class="forms__legend">Жирность:</legend>
-          <input type="radio" name="fat content" value="0%" id="fat-content-0%">
-          <label class="forms__text" for="fat-content-0%">0%</label>
-          <input type="radio" name="fat content" value="до 10%" id="fat-content-to-10%">
-          <label class="forms__text" for="fat-content-to-10%">до 10%</label>
-          <input type="radio" name="fat content" value="до 30%" id="fat-content-to-30%">
-          <label class="forms__text" for="fat-content-to-30%">до 30%</label>
-          <input type="radio" name="fat content" value="выше 30%" id="fat-content-over-30%">
-          <label class="forms__text" for="fat-content-over-30%">выше 30%</label>
+          <fieldset>
+            <legend class="forms__legend">Жирность:</legend>
+            <label class="forms__radio--pseudo">
+              <input class="forms__radio" type="radio" name="fat content" value="0%">
+              <span class="forms__text">0%</span></label>
+            <label class="forms__radio--pseudo">
+              <input class="forms__radio" type="radio" name="fat content" value="до 10%">
+              <span class="forms__text">до 10%</span></label>
+            <label class="forms__radio--pseudo">
+              <input class="forms__radio" type="radio" name="fat content" value="до 30%">
+              <span class="forms__text">до 30%</span></label>
+            <label class="forms__radio--pseudo">
+              <input class="forms__radio" type="radio" name="fat content" value="выше 30%">
+              <span class="forms__text">выше 30%</span></label>
+          </fieldset>
         </div>
         <div class="forms__fillers">
-          <legend class="forms__legend">Наполнители:</legend>
-          <input type="checkbox" name="chocolate" id="filler-chocolate">
-          <label class="forms__text" for="filler-chocolate">шоколадные</label>
-          <input type="checkbox" name="sugar-powder" id="filler-sugar-powder">
-          <label class="forms__text" for="filler-sugar-powder">сахарные присыпки</label>
-          <input type="checkbox" name="fruit" id="filler-fruit">
-          <label class="forms__text" for="filler-fruit">фрукты</label>
-          <input type="checkbox" name="syrup" id="filler-syrup">
-          <label class="forms__text" for="filler-syrup">сиропы</label>
-          <input type="checkbox" name="jam" id="filler-jam">
-          <label class="forms__text" for="filler-jam">джемы</label>
+          <fieldset>
+            <legend class="forms__legend">Наполнители:</legend>
+            <input type="checkbox" name="chocolate" id="filler-chocolate">
+            <label class="forms__text" for="filler-chocolate">шоколадные</label>
+            <input type="checkbox" name="sugar-powder" id="filler-sugar-powder">
+            <label class="forms__text" for="filler-sugar-powder">сахарные присыпки</label>
+            <input type="checkbox" name="fruit" id="filler-fruit">
+            <label class="forms__text" for="filler-fruit">фрукты</label>
+            <input type="checkbox" name="syrup" id="filler-syrup">
+            <label class="forms__text" for="filler-syrup">сиропы</label>
+            <input type="checkbox" name="jam" id="filler-jam">
+            <label class="forms__text" for="filler-jam">джемы</label>
+          </fieldset>
         </div>
         <button class="forms__button" type="submit">Применить</button>
       </form>
@@ -136,66 +153,78 @@
         <img class="product-card__image" src="img/ice-cream-1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
         <p class="product-card__price">310₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
         <p class="product-card__text">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+        <button class="product-card__button button">Быстрый просмотр</button>
       </article>
       <article class="catalogue__item product-card">
         <img class="product-card__image" src="img/ice-cream-2.png" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
         <p class="product-card__price">380₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
         <p class="product-card__text">Сливочно-кофейное с кусочками шоколада</p>
+        <button class="product-card__button button">Быстрый просмотр</button>
       </article>
       <article class="catalogue__item product-card">
         <img class="product-card__image" src="img/ice-cream-3.png" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
         <p class="product-card__price">355₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
         <p class="product-card__text">Сливочно-клубничное с присыпкой из белого шоколада</p>
+        <button class="product-card__button button">Быстрый просмотр</button>
       </article>
       <article class="catalogue__item product-card">
         <img class="product-card__image" src="img/ice-cream-4.png" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
         <p class="product-card__price">415₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
         <p class="product-card__text">Сливочное крем-брюле с карамельной подливкой</p>
+        <button class="product-card__button button">Быстрый просмотр</button>
       </article>
       <article class="catalogue__item product-card">
         <img class="product-card__image" src="img/ice-cream-5.png" alt="Сливочное с брусничным джемом" width="267" height="267">
         <p class="product-card__price">325₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
         <p class="product-card__text">Сливочное с брусничным джемом</p>
+        <button class="product-card__button button">Быстрый просмотр</button>
       </article>
       <article class="catalogue__item product-card">
         <img class="product-card__image" src="img/ice-cream-6.png" alt="Сливочно-черничное с цельными ягодами" width="267" height="267">
         <p class="product-card__price">410₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
         <p class="product-card__text">Сливочно-черничное с цельными ягодами</p>
+        <button class="product-card__button button">Быстрый просмотр</button>
       </article>
       <article class="catalogue__item product-card">
         <img class="product-card__image" src="img/ice-cream-7.png" alt="Сливочно-лимонное с карамельной присыпкой" width="267" height="267">
         <p class="product-card__price">375₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
         <p class="product-card__text">Сливочно-лимонное с карамельной присыпкой</p>
+        <button class="product-card__button button">Быстрый просмотр</button>
       </article>
       <article class="catalogue__item product-card">
         <img class="product-card__image" src="img/ice-cream-8.png" alt="Сливочное с шоколадной стружкой" width="267" height="267">
         <p class="product-card__price">320₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
         <p class="product-card__text">Сливочное с шоколадной стружкой</p>
+        <button class="product-card__button button">Быстрый просмотр</button>
       </article>
       <article class="catalogue__item product-card">
         <img class="product-card__image" src="img/ice-cream-9.png" alt="Сливочно-ванильное с кусочками шоколада" width="267" height="267">
         <p class="product-card__price">440₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
         <p class="product-card__text">Сливочно-ванильное с кусочками шоколада</p>
+        <button class="product-card__button button">Быстрый просмотр</button>
       </article>
       <article class="catalogue__item product-card">
         <img class="product-card__image" src="img/ice-cream-10.png" alt="Сливочное с ментоловым сиропом" width="267" height="267">
         <p class="product-card__price">435₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
         <p class="product-card__text">Сливочное с ментоловым сиропом</p>
+        <button class="product-card__button button">Быстрый просмотр</button>
       </article>
       <article class="catalogue__item product-card">
         <img class="product-card__image" src="img/ice-cream-11.png" alt="Сливочное с кусочками чёрного шоколада" width="267" height="267">
         <p class="product-card__price">355₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
         <p class="product-card__text">Сливочное с кусочками чёрного шоколада</p>
+        <button class="product-card__button button">Быстрый просмотр</button>
       </article>
       <article class="catalogue__item product-card">
         <img class="product-card__image" src="img/ice-cream-12.png" alt="Сливочное с мятным сиропом" width="267" height="267">
         <p class="product-card__price">420₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
         <p class="product-card__text">Сливочное с мятным сиропом</p>
+        <button class="product-card__button button">Быстрый просмотр</button>
       </article>
     </section>
     <section class="pagination container">
       <div class="pagination__wrapper">
-        <a class="pagination__button pagination__button--inactive"><span class="v-h">Назад</span></a>
+        <a class="pagination__button pagination__button--left pagination__button--inactive"><span class="visually-hidden">Назад</span></a>
         <ul class="pagination__list">
           <li class="pagination__item"><a class="pagination__link pagination__link--current">1</a></li>
           <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
@@ -203,7 +232,7 @@
           <li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
           <li class="pagination__item"><a class="pagination__link" href="#">5</a></li>
         </ul>
-        <a class="pagination__button" href="#"><span class="v-h">Далее</span></a>
+        <a class="pagination__button pagination__button--right" href="#"><span class="visually-hidden">Далее</span></a>
       </div>
     </section>
   </main>
