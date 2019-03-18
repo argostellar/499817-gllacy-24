@@ -19,11 +19,11 @@
         <li class="main-nav__item">
           <a class="main-nav__link" href="catalog.html">Каталог</a>
           <ul class="drop-down">
-            <li class="drop-down__item drop-down__item--important"><a href="#">Новинки</a></li>
-            <li class="drop-down__item"><a href="#">Сливочное</a></li>
-            <li class="drop-down__item"><a href="#">Щербеты</a></li>
-            <li class="drop-down__item"><a href="#">Фруктовый лёд</a></li>
-            <li class="drop-down__item"><a href="#">Мелорин</a></li>
+            <li class="drop-down__item drop-down__item--important"><a class="drop-down__link drop-down__link--important" href="#">Новинки</a></li>
+            <li class="drop-down__item"><a class="drop-down__link" href="#">Сливочное</a></li>
+            <li class="drop-down__item"><a class="drop-down__link" href="#">Щербеты</a></li>
+            <li class="drop-down__item"><a class="drop-down__link" href="#">Фруктовый лёд</a></li>
+            <li class="drop-down__item"><a class="drop-down__link" href="#">Мелорин</a></li>
           </ul>
         </li>
         <li class="main-nav__item">
@@ -49,7 +49,14 @@
             </form>
           </div>
         </li>
-        <li class="user-nav__item user-nav__item--enter">Вход
+        <li class="user-nav__item user-nav__item--enter">
+          <svg class="user-nav__icon" fill="#FFFFFF" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="19px" viewBox="0 0 21 19" enable-background="new 0 0 21 19" xml:space="preserve">
+            <g>
+              <polygon points="6,14.875 12.917,9.5 6,4.125 6,7.042 -0.042,7.042 -0.042,11.959 6,11.959   " />
+              <path d="M18,0H5C3.9,0,3,0.9,3,2v2h2V2h13v15H5v-2H3v2c0,1.1,0.9,2,2,2h13c1.1,0,2-0.9,2-2V2C20,0.9,19.1,0,18,0z" />
+            </g>
+          </svg>
+          <button class="user-nav__button" type="button">Вход</button>
           <div class="user-nav__popup">
             <form>
               <p>
@@ -68,7 +75,16 @@
             </div>
           </div>
         </li>
-        <li class="user-nav__item user-nav__item--cart">Корзина</li>
+        <li class="user-nav__item user-nav__item--cart">
+          <svg class="user-nav__icon" fill="#FFFFFF" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="20px" viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
+            <g>
+              <path d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66
+    L17.372,13z" />
+              <circle cx="6.984" cy="18" r="2" />
+              <circle cx="15.984" cy="18" r="2" />
+            </g>
+          </svg>
+          <button class="user-nav__button" type="button">Корзина</button></li>
       </ul>
     </nav>
     <div class="main-header__wrapper">
@@ -80,37 +96,39 @@
     <h1 class="visually-hidden">Gllacy Shop: магазин мороженого</h1>
     <section class="slider container">
       <!---- Placeholder ------>
-      <div class="slider__image">
-        <img src="img/bg-slider-1.png" width="1045" height="881" alt="Крем-брюле и пломбир с малиновым джемом">
-        <h2 class="slider__title">Крем-брюле и пломбир с малиновым джемом</h2>
-        <a class="slider__button button" href="#">Давайте оба!</a>
-      </div>
-      <div class="slider__image slider__image--hidden">
-        <img src="img/bg-slider-2.png" width="1065" height="859" alt="Шоколадный пломбир и лимонный сорбет">
-        <h2 class="slider__title">Шоколадный пломбир и лимонный сорбет </h2>
-        <a class="slider__button button" href="#">Давайте оба!</a>
-      </div>
-      <div class="slider__image slider__image--hidden">
-        <img src="img/bg-slider-3.png" width="1079" height="854" alt="Пломбир с помадкой и клубничный щербет">
-        <h2 class="slider__title">Пломбир с помадкой и клубничный щербет</h2>
-        <a class="slider__button button" href="#">Давайте оба!</a>
+      <div class="slider__wrapper">
+        <div class="slider__item">
+          <img class="slider__image" src="img/bg-slider-1.png" width="1045" height="881" alt="Крем-брюле и пломбир с малиновым джемом">
+          <h2 class="slider__title">Крем-брюле и пломбир с малиновым джемом</h2>
+          <a class="slider__button button" href="#">Давайте оба!</a>
+        </div>
+        <div class="slider__item slider__item--hidden">
+          <img class="slider__image" src="img/bg-slider-2.png" width="1065" height="859" alt="Шоколадный пломбир и лимонный сорбет">
+          <h2 class="slider__title">Шоколадный пломбир и лимонный сорбет </h2>
+          <a class="slider__button button" href="#">Давайте оба!</a>
+        </div>
+        <div class="slider__item slider__item--hidden">
+          <img class="slider__image" src="img/bg-slider-3.png" width="1079" height="854" alt="Пломбир с помадкой и клубничный щербет">
+          <h2 class="slider__title">Пломбир с помадкой и клубничный щербет</h2>
+          <a class="slider__button button" href="#">Давайте оба!</a>
+        </div>
       </div>
       <div class="slider__ctrl-wrapper">
-        <button class="slider__ctrl-btn" type="button">o</button>
-        <button class="slider__ctrl-btn" type="button">o</button>
-        <button class="slider__ctrl-btn" type="button">o</button>
+        <button class="slider__ctrl-btn slider__ctrl-btn--current" type="button"></button>
+        <button class="slider__ctrl-btn" type="button"></button>
+        <button class="slider__ctrl-btn" type="button"></button>
       </div>
     </section>
     <section class="promo container">
       <div class="promo__item promo__item--raspberry">
         <h2 class="promo__title">Малинка даром!</h2>
         <p class="promo__text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-        <button class="promo__button button" type="button">Хочу варенье!</button>
+        <a href="#" class="promo__button button">Хочу варенье!</a>
       </div>
       <div class="promo__item promo__item--chocolate">
         <h2 class="promo__title">Шоколадки даром!</h2>
         <p class="promo__text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-        <button class="promo__button button" type="button">Хочу шоколадки!</button>
+        <a href="#" class="promo__button button">Хочу шоколадки!</a>
       </div>
     </section>
     <section class="hit-sales container">
@@ -118,33 +136,33 @@
         <img class="product-card__image" src="img/ice-cream-1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
         <p class="product-card__price">310₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
         <p class="product-card__text">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
-        <button class="product-card__button button">Быстрый просмотр</button>
+        <a href="#" class="product-card__button button">Быстрый просмотр</a>
       </article>
       <article class="hit-sales__item product-card">
         <img class="product-card__image" src="img/ice-cream-2.png" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
         <p class="product-card__price">380₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
         <p class="product-card__text">Сливочно-кофейное с кусочками шоколада</p>
-        <button class="product-card__button button">Быстрый просмотр</button>
+        <a href="#" class="product-card__button button">Быстрый просмотр</a>
       </article>
       <article class="hit-sales__item product-card">
         <img class="product-card__image" src="img/ice-cream-3.png" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
         <p class="product-card__price">355₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
         <p class="product-card__text">Сливочно-клубничное с присыпкой из белого шоколада</p>
-        <button class="product-card__button button">Быстрый просмотр</button>
+        <a href="#" class="product-card__button button">Быстрый просмотр</a>
       </article>
       <article class="hit-sales__item product-card">
         <img class="product-card__image" src="img/ice-cream-4.png" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
         <p class="product-card__price">415₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
         <p class="product-card__text">Сливочное крем-брюле с карамельной подливкой</p>
-        <button class="product-card__button button">Быстрый просмотр</button>
+        <a href="#" class="product-card__button button">Быстрый просмотр</a>
       </article>
     </section>
     <section class="advantages container">
       <h2 class="advantages__title">Магазин Глейси - это онлайн- и офлайн-магазин по продаже мороженного собственного производства на развес</h2>
       <div class="advantages__main-wrapper">
         <p class="advantages__text advantages__text--ice">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
-        <p class="advantages__text advantages__text--leaf">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </p>
         <p class="advantages__text advantages__text--cow">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+        <p class="advantages__text advantages__text--leaf">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </p>
         <p class="advantages__text advantages__text--degree">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
       </div>
     </section>
@@ -164,7 +182,7 @@
     </div>
     <section class="map">
       <h2 class="visually-hidden">Местоположение магазина и контактная информация</h2>
-      <div class="map__container">
+      <div class="map__container container">
         <div class="map__info">
           <p class="map__text">Адрес главного офиса и офлайн-магазина:</p>
           <p class="map__text map__text--big">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
