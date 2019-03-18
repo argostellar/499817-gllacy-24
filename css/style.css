@@ -337,7 +337,7 @@ img {
 }
 
 .user-nav__item--enter::before {
-  content: '';
+  content: "";
 
   position: absolute;
   top: 6px;
@@ -355,7 +355,7 @@ img {
 }
 
 .user-nav__item--cart::before {
-  content: '';
+  content: "";
 
   position: absolute;
   top: 6px;
@@ -543,7 +543,7 @@ img {
 }
 
 .hit-sales__item::before {
-  content: '';
+  content: "";
 
   width: 61px;
   height: 61px;
@@ -872,7 +872,8 @@ img {
   fill: rgba(255,255,255, 0.7);
 }
 
-.social__link:hover path {
+.social__link:hover path,
+.social__link:focus path {
   fill: rgba(255,255,255, 1);
 }
 
