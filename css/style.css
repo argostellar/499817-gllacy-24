@@ -327,7 +327,12 @@ img {
 }
 
 .user-nav__input {
+  flex-grow: 1;
   min-width: 240px;
+}
+
+.user-nav__input--search {
+  min-width: 310px;
 }
 
 .user-nav__modal-wrapper {
@@ -395,7 +400,7 @@ img {
 
 .user-nav__button:hover + .user-nav__modal,
 .user-nav__button:focus + .user-nav__modal {
-  display: block;
+  display: flex;
 }
 
 .user-nav__button--enter {
@@ -1197,13 +1202,16 @@ img {
 
 /* <--- FORM ---> */
 
-.form {
+.forms {}
+
+.forms__form {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
 
-  max-width: 879px;
+  /*max-width: 879px;*/
 }
+
 
 .forms__button {
   font-size: 16px;
@@ -1245,26 +1253,129 @@ img {
   line-height: auto;
   font-weight: 500;
   color: #ffffff;
+
+  padding-left: 20px;
 }
 
-.forms__radio {
-
+.forms__fieldset {
+  border: none;
 }
 
-.forms__radio--pseudo {
+.forms__background {
+  background-color: rgba(255,255,255, 0.3);
+  min-height: 36px;
+
+  border-radius: 16px;
+}
+
+.forms__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.forms__item-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+  border: 2px solid red;
+
+  min-width: 150px;
+}
+
+.forms__select {
+  border: none;
+}
+
+.forms__input {
+  display: none;
+}
+
+.forms__input--text {}
+
+.forms__input--radio {}
+
+.forms__input--radio:checked {}
+
+.forms__input--checkbox {}
+
+.forms__input--checkbox:checked {}
+
+.forms__pseudo {
   position: relative;
 }
 
-.forms__radio--pseudo::before {
+.forms__pseudo--radio {}
+
+.forms__pseudo--checkbox {}
+
+.forms__input--radio:not(checked) + .forms__pseudo--radio {
+  position: relative;
+}
+
+.forms__input--radio:not(checked) + .forms__pseudo--radio:before {
   content: "";
 
-  position: absolute;
-  top: 1px;
-  left: 1px;
+  width: 16px;
+  height: 16px;
 
-  background-image: url('../img/radio-off.svg');
-  background-repeat: no-repeat;
+  border-radius: 50%;
+
+  border: 2px solid #000;
+  position: absolute;
+
+  left: 0;
 }
+
+.forms__input--radio:checked + .forms__pseudo--radio:after {
+  content: "";
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  border: 2px solid #000;
+
+  position: absolute;
+  background-color: #000;
+
+  left: 6px;
+  top: 6px;
+}
+
+.forms__input--checkbox:not(checked) + .forms__pseudo--checkbox {
+  position: relative;
+}
+
+.forms__input--checkbox:not(checked) + .forms__pseudo--checkbox:before {
+  content: "";
+
+  width: 20px;
+  height: 20px;
+
+  border: 2px solid rgba(255,255,255, 0.8);
+  border-radius: 2px;
+
+  position: absolute;
+  left: 0;
+}
+.forms__input--checkbox:checked + .forms__pseudo--checkbox:after {
+  content: "";
+
+  width: 20px;
+  height: 20px;
+
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+
+  position: absolute;
+  left: 1px;
+  top: -8px;
+}
+
 
 /* <--- CATALOGUE ---> */
 
@@ -1485,12 +1596,10 @@ img {
   top: 36px;
   right: 1px;
 
-  display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 
   min-width: 540px;
-  min-height: 245px;
 
   padding: 15px;
 
@@ -1510,12 +1619,13 @@ img {
 }
 
 .cart__table {
+  margin: 0;
+  padding: 0;
+
   border-bottom: 1px solid #cacac7;
 }
 
-.cart__item {
-  background-color: rgba(255,22,250, 0.3);
-}
+.cart__item {}
 
 .cart__text {
   padding: 0;
@@ -1533,14 +1643,14 @@ img {
 
 /* <---- ROW ----> */
 
-.row {
-
-}
+.row {}
 
 .row__item {
   text-align: center;
   vertical-align: middle;
   height: 50px;
+
+  padding: 0;
 }
 
 .row__item--text {
@@ -1548,11 +1658,13 @@ img {
   width: 230px;
 }
 
+.row__item--price {
+  width: 125px;
+}
+
 .row__text--dim {
   color: #999999;
 }
-
-.row__button {}
 
 .row__button {
   position: relative;

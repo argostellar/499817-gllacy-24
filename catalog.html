@@ -40,7 +40,7 @@
           </button>
           <div class="user-nav__modal user-nav__modal--search modal">
             <form class="user-nav__form user-nav__form--search">
-              <input class="user-nav__input input" type="search" name="search" placeholder="Что ищем?">
+              <input class="user-nav__input user-nav__input--search input" type="search" name="search" placeholder="Что ищем?">
             </form>
           </div>
         </li>
@@ -92,14 +92,14 @@
                 <td class="row__item"><button class="row__button"><span class="visually-hidden">Удалить</span></button></td>
                 <td class="row__item"><img src="img/ice-cream-1.png" width="33" height="33" alt="Миниатюра товара: Пломбир с апельсиновым джемом"></td>
                 <td class="row__item row__item--text">Пломбир с апельсиновым джемом</td>
-                <td class="row__item">1,5 кг х <span class="row__text--dim">200 руб.</span></td>
+                <td class="row__item row__item--price">1,5 кг х <span class="row__text--dim">200 руб.</span></td>
                 <td class="row__item">300 руб.</td>
               </tr>
               <tr class="cart__item row">
                 <td class="row__item"><button class="row__button"><span class="visually-hidden">Удалить</span></button></td>
                 <td class="row__item"><img src="img/ice-cream-3.png" width="33" height="33" alt="Миниатюра товара: Клубничный пломбир с присыпкой из белого шоколада"></td>
                 <td class="row__item row__item--text">Клубничный пломбир с присыпкой из белого шоколада</td>
-                <td class="row__item">1,5 кг х <span class="row__text--dim">300 руб.</span></td>
+                <td class="row__item row__item--price">1,5 кг х <span class="row__text--dim">300 руб.</span></td>
                 <td class="row__item">450 руб.</td>
               </tr>
             </table>
@@ -125,10 +125,10 @@
     </ul>
     <h2 class="page-title">Сливочное мороженое</h2>
     <section class="forms container">
-      <form class="form">
+      <form class="forms__form">
         <div class="forms__sorting">
-          <label class="forms__legend" for="sorting">Сортировка:</label>
-          <select name="sorting" id="sorting">
+          <legend class="forms__legend">Сортировка:</legend>
+          <select class="forms__background forms__select" name="sorting" id="sorting">
             <option value="по популярности" selected>по популярности</option>
             <option value="сначала недорогие">сначала недорогие</option>
             <option value="сначала дорогие">сначала дорогие</option>
@@ -136,41 +136,52 @@
           </select>
         </div>
         <div class="forms__price">
-          <fieldset>
-            <legend class="forms__legend">Цена:</legend>
-            <input type="text" name="price" value="100 руб."> - <input type="text" name="price" value="500 руб.">
+          <fieldset class="forms__fieldset">
+            <legend class="forms__legend">Цена: <span class="forms__price-value forms__price-value--min">100 руб.</span> - <span class="forms__price-value forms__price-value--max">500 руб.</span></legend>
+            <div class="forms__background forms__wrapper">
+              <span class="visually-hidden">От</span>
+              <input class="forms__input forms__input--text" type="text" name="price" value="100 руб."><span class="visually-hidden">До</span><input class="forms__input forms__input--text" type="text" name="price" value="500 руб.">
+            </div>
           </fieldset>
         </div>
         <div class="forms__fat-content">
-          <fieldset>
+          <fieldset class="forms__fieldset">
             <legend class="forms__legend">Жирность:</legend>
-            <label class="forms__radio--pseudo">
-              <input class="forms__radio" type="radio" name="fat content" value="0%">
-              <span class="forms__text">0%</span></label>
-            <label class="forms__radio--pseudo">
-              <input class="forms__radio" type="radio" name="fat content" value="до 10%">
-              <span class="forms__text">до 10%</span></label>
-            <label class="forms__radio--pseudo">
-              <input class="forms__radio" type="radio" name="fat content" value="до 30%">
-              <span class="forms__text">до 30%</span></label>
-            <label class="forms__radio--pseudo">
-              <input class="forms__radio" type="radio" name="fat content" value="выше 30%">
-              <span class="forms__text">выше 30%</span></label>
+            <div class="forms__background forms__wrapper">
+              <div class="forms__item-wrapper">
+                <label class="forms__pseudo forms__pseudo--radio" for="0%"><span class="forms__text">0%</span></label>
+                <input class="forms__input forms__input--radio" type="radio" name="fat content" value="0%" id="0%">
+              </div>
+              <div class="forms__item-wrapper">
+                <label class="forms__pseudo forms__pseudo--radio" for="less10%"><span class="forms__text">до 10%</span></label>
+                <input class="forms__input forms__input--radio" type="radio" name="fat content" value="до 10%" id="less10%">
+              </div>
+              <div class="forms__item-wrapper">
+                <label class="forms__pseudo forms__pseudo--radio" for="less30%"><span class="forms__text">до 30%</span></label>
+                <input class="forms__input forms__input--radio" type="radio" name="fat content" value="до 30%" id="less30%">
+              </div>
+              <div class="forms__item-wrapper">
+                <label class="forms__pseudo forms__pseudo--radio" for="over30%"><span class="forms__text">выше 30%</span></label>
+                <input class="forms__input forms__input--radio" type="radio" name="fat content" value="выше 30%" id="over30%">
+              </div>
+            </div>
           </fieldset>
         </div>
         <div class="forms__fillers">
-          <fieldset>
+          <fieldset class="forms__fieldset">
             <legend class="forms__legend">Наполнители:</legend>
-            <input type="checkbox" name="chocolate" id="filler-chocolate">
-            <label class="forms__text" for="filler-chocolate">шоколадные</label>
-            <input type="checkbox" name="sugar-powder" id="filler-sugar-powder">
-            <label class="forms__text" for="filler-sugar-powder">сахарные присыпки</label>
-            <input type="checkbox" name="fruit" id="filler-fruit">
-            <label class="forms__text" for="filler-fruit">фрукты</label>
-            <input type="checkbox" name="syrup" id="filler-syrup">
-            <label class="forms__text" for="filler-syrup">сиропы</label>
-            <input type="checkbox" name="jam" id="filler-jam">
-            <label class="forms__text" for="filler-jam">джемы</label>
+            <div class="forms__wrapper forms__background">
+              <input class="forms__input forms__input--checkbox" type="checkbox" name="chocolate" id="filler-chocolate">
+              <label class="forms__text forms__pseudo--checkbox" for="filler-chocolate">шоколадные</label>
+              <input class="forms__input forms__input--checkbox" type="checkbox" name="sugar-powder" id="filler-sugar-powder">
+              <label class="forms__text forms__pseudo--checkbox" for="filler-sugar-powder">сахарные присыпки</label>
+              <input class="forms__input forms__input--checkbox" type="checkbox" name="fruit" id="filler-fruit">
+              <label class="forms__text forms__pseudo--checkbox" for="filler-fruit">фрукты</label>
+              <input class="forms__input forms__input--checkbox" type="checkbox" name="syrup" id="filler-syrup">
+              <label class="forms__text forms__pseudo--checkbox" for="filler-syrup">сиропы</label>
+              <input class="forms__input forms__input--checkbox" type="checkbox" name="jam" id="filler-jam">
+              <label class="forms__text forms__pseudo--checkbox" for="filler-jam">джемы</label>
+            </div>
           </fieldset>
         </div>
         <button class="forms__button" type="submit">Применить</button>
