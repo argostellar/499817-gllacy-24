@@ -1217,6 +1217,11 @@ img {
 .forms__price {
   min-width: 60px;
   background-color: transparent;
+
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
 }
 
 .forms__price--min {}
@@ -1261,7 +1266,7 @@ img {
 
 .forms__legend {
   font-size: 14px;
-  line-height: auto;
+  line-height: 16px;
   font-weight: 500;
   color: #ffffff;
 
@@ -1332,6 +1337,11 @@ img {
 .forms__select {
   border: none;
   appearance: none;
+
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
 }
 
 .forms__input {
@@ -1340,6 +1350,12 @@ img {
 
 .forms__label {
   padding: 10px 30px;
+  cursor: pointer;
+
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
 }
 
 .forms__range-control {}
