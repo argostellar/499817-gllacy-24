@@ -1212,6 +1212,17 @@ img {
   /*max-width: 879px;*/
 }
 
+.forms__block {}
+
+.forms__price {
+  min-width: 60px;
+  background-color: transparent;
+}
+
+.forms__price--min {}
+
+.forms__price--max {}
+
 
 .forms__button {
   font-size: 16px;
@@ -1277,103 +1288,118 @@ img {
 .forms__item-wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 
   box-sizing: border-box;
   border: 2px solid red;
 
   min-width: 150px;
+
+  position: relative;
+}
+
+.forms__icon {
+  position: absolute;
+  top: 5px;
+  left: 15px;
+}
+
+.forms__icon--off {
+  fill: rgba(255,255,255, 0.7);
+}
+
+.forms__icon--on {
+  fill: transparent;
+}
+
+.forms__input:checked ~ .forms__icon--off {
+  fill: transparent;
+}
+
+.forms__input:checked ~ .forms__icon--on {
+  fill: rgba(255,255,255, 0.7);
+}
+
+.forms__input:not(:checked):hover ~ .forms__icon--off {
+  fill: rgba(255,255,255, 0.9);
+}
+
+.forms__input:checked:hover ~ .forms__icon--on {
+  fill: rgba(255,255,255, 0.9);
 }
 
 .forms__select {
   border: none;
+  appearance: none;
 }
 
 .forms__input {
   display: none;
 }
 
-.forms__input--text {}
-
-.forms__input--radio {}
-
-.forms__input--radio:checked {}
-
-.forms__input--checkbox {}
-
-.forms__input--checkbox:checked {}
-
-.forms__pseudo {
-  position: relative;
+.forms__label {
+  padding: 10px 30px;
 }
 
-.forms__pseudo--radio {}
+.forms__range-control {}
 
-.forms__pseudo--checkbox {}
 
-.forms__input--radio:not(checked) + .forms__pseudo--radio {
+/* <--- RANGE-CONTROL ---> */
+
+
+.range-control {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
   position: relative;
+  width: 218px;
+
 }
 
-.forms__input--radio:not(checked) + .forms__pseudo--radio:before {
-  content: "";
+.range-control__line {
+  height: 2px;
+}
 
-  width: 16px;
-  height: 16px;
+.range-control__line--passive {
+  margin: 0 21px;
+  background-color: rgba(255,255,255, 0.3);
+  flex-grow: 1;
+}
 
-  border-radius: 50%;
+.range-control__line--active {
+  width: 50%;
+  background-color: rgba(255,255,255, 0.9);
 
-  border: 2px solid #000;
+  margin-left: 30px;
+}
+
+.range-control__button {
   position: absolute;
-
-  left: 0;
-}
-
-.forms__input--radio:checked + .forms__pseudo--radio:after {
-  content: "";
-
-  width: 4px;
-  height: 4px;
-
-  border-radius: 50%;
-
-  border: 2px solid #000;
-
-  position: absolute;
-  background-color: #000;
-
-  left: 6px;
-  top: 6px;
-}
-
-.forms__input--checkbox:not(checked) + .forms__pseudo--checkbox {
-  position: relative;
-}
-
-.forms__input--checkbox:not(checked) + .forms__pseudo--checkbox:before {
-  content: "";
+  top: 8px;
 
   width: 20px;
   height: 20px;
 
-  border: 2px solid rgba(255,255,255, 0.8);
-  border-radius: 2px;
+  box-sizing: border-box;
+  border: 8px solid rgba(255,255,255, 1);
+  border-radius: 50%;
 
-  position: absolute;
-  left: 0;
+  background-color: rgba(171,171,171, 1);
 }
-.forms__input--checkbox:checked + .forms__pseudo--checkbox:after {
-  content: "";
 
-  width: 20px;
-  height: 20px;
+.range-control__button:hover {
+  transform: scale(1.1);
+}
 
-  background-image: url("../img/checkbox-on.svg");
-  background-repeat: no-repeat;
+.range-control__button--min {
+  left: 35px;
+}
 
-  position: absolute;
-  left: 1px;
-  top: -8px;
+.range-control__button--max {
+  right: 65px;
 }
 
 
@@ -1581,6 +1607,7 @@ img {
 
 .modal {
   display: none;
+  z-index: 98;
 }
 
 .popup {
