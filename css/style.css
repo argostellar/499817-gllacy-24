@@ -191,7 +191,7 @@ img {
   align-items: center;
 
   margin: 13px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 
   position: relative;
 }
@@ -259,6 +259,7 @@ img {
 */
   position: absolute;
   top: 40px;
+  left: -7px;
   z-index: 50;
 }
 
@@ -311,6 +312,11 @@ img {
 
 .drop-down__item:hover,
 .drop-down__item:focus {
+  background-color: #fbded8;
+}
+
+.drop-down__link:focus,
+.drop-down__link:focus .drop-down__item{
   background-color: #fbded8;
 }
 
