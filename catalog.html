@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no">
   <title>HTML Academy: Каталог Глейси</title>
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
@@ -14,29 +15,33 @@
     <a class="main-header__logo" href="index.html">
       <img src="img/logo-gllacy.svg" alt="Логотип мазазина мороженого Глейси" width="154" height="64">
     </a>
-    <nav class="main-header__nav main-nav">
+    <nav class="main-header__main-nav main-nav">
       <ul class="main-nav__list">
         <li class="main-nav__item">
           <a class="main-nav__link main-nav__link--current">Каталог</a>
           <ul class="drop-down">
             <li class="drop-down__item drop-down__item--important">
-              <div class="drop-down__item-wrapper">
+              <div class="drop-down__item-wrapper drop-down__item-wrapper--important">
                 <a class="drop-down__link drop-down__link--important" href="#">Новинки</a>
               </div>
             </li>
             <li class="drop-down__item drop-down__item--current">
-                <a class="drop-down__link drop-down__link--current">Сливочное</a>
-            </li>
-            <li class="drop-down__item">
-              <a class="drop-down__link" href="#">Щербеты</a>
-            </li>
-            <li class="drop-down__item drop-down__item--important">
               <div class="drop-down__item-wrapper">
-              <a class="drop-down__link drop-down__link--important" href="#">Фруктовый лёд</a>
-            </div>
+                <a class="drop-down__link drop-down__link--current">Сливочное</a>
+              </div>
             </li>
             <li class="drop-down__item">
-              <a class="drop-down__link" href="#">Мелорин</a>
+              <div class="drop-down__item-wrapper">
+                <a class="drop-down__link" href="#">Щербеты</a></div>
+            </li>
+            <li class="drop-down__item">
+              <div class="drop-down__item-wrapper">
+                <a class="drop-down__link" href="#">Фруктовый лёд</a>
+              </div>
+            </li>
+            <li class="drop-down__item">
+              <div class="drop-down__item-wrapper">
+                <a class="drop-down__link" href="#">Мелорин</a></div>
             </li>
           </ul>
         </li>
@@ -47,7 +52,9 @@
           <a class="main-nav__link" href="#">О Компании</a>
         </li>
       </ul>
-      <ul class="main-nav__user-nav user-nav">
+    </nav>
+    <nav class="main-header__user-nav user-nav">
+      <ul class="user-nav__list">
         <li class="user-nav__item">
           <p class="visually-hidden">Поиск</p>
           <button class="user-nav__button user-nav__button--search" type="button">
@@ -73,7 +80,7 @@
                 <path d="M18,0H5C3.9,0,3,0.9,3,2v2h2V2h13v15H5v-2H3v2c0,1.1,0.9,2,2,2h13c1.1,0,2-0.9,2-2V2C20,0.9,19.1,0,18,0z" />
               </g>
             </svg>
-            <p class="user-nav__text">Вход</p>
+            <span class="user-nav__text">Вход</span>
           </button>
           <div class="user-nav__modal user-nav__modal--enter modal">
             <form class="user-nav__form user-nav__form--enter">
@@ -104,7 +111,7 @@
               <path fill="#343434" d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66
   L17.372,13z" />
             </svg>
-            <p class="user-nav__text user-nav__text--active">2 товара</p>
+            <span class="user-nav__text user-nav__text--active">2 товара</span>
             <span class="visually-hidden">Корзина</span>
           </button>
           <div class="cart user-nav__modal modal">
@@ -146,21 +153,25 @@
     </ul>
     <h2 class="page-title">Сливочное мороженое</h2>
     <section class="forms">
+      <h3 class="visually-hidden">Параметры товаров</h3>
       <form class="forms__form">
         <div class="forms__sorting forms__block">
           <fieldset class="forms__fieldset">
             <legend class="forms__legend forms__legend--sorting">Сортировка:</legend>
-            <select class="forms__background forms__select" name="sorting" id="sorting">
-              <option value="по популярности" selected>по популярности</option>
-              <option value="сначала недорогие">сначала недорогие</option>
-              <option value="сначала дорогие">сначала дорогие</option>
-              <option value="по жирности">по жирности</option>
-            </select>
+            <div class="forms__select-wrapper">
+              <select class="forms__background forms__select" name="sorting" id="sorting">
+                <option value="по популярности" selected>по популярности</option>
+                <option value="сначала недорогие">сначала недорогие</option>
+                <option value="сначала дорогие">сначала дорогие</option>
+                <option value="по жирности">по жирности</option>
+              </select>
+              <div class="forms__select-afterelement"></div>
+            </div>
           </fieldset>
         </div>
         <div class="forms__price forms__block">
           <fieldset class="forms__fieldset">
-            <legend class="forms__legend forms__legend--price">Цена: <span class="visually-hidden">От</span><input class="forms__price-value forms__price--min" type="text" name="price" value="100 руб."> - <span class="visually-hidden">До</span><input class="forms__price-value forms__price--max" type="text" name="price" value="500 руб."></legend>
+            <legend class="forms__legend forms__legend--price">Цена: <span class="visually-hidden">От</span><input class="forms__price-value forms__price--min" type="text" name="price" value="100 руб.">&mdash;<span class="visually-hidden">До</span><input class="forms__price-value forms__price--max" type="text" name="price" value="500 руб."></legend>
             <div class="forms__background forms__range-control range-control">
               <div class="range-control__line range-control__line--passive">
                 <div class="range-control__line range-control__line--active"></div>
@@ -172,59 +183,51 @@
         </div>
         <div class="forms__fat-content forms__block">
           <fieldset class="forms__fieldset">
-            <legend class="forms__legend">Жирность:</legend>
+            <legend class="forms__legend forms__legend--fat-content">Жирность:</legend>
             <div class="forms__background forms__wrapper">
               <div class="forms__item-wrapper">
-                <input class="forms__input" type="radio" name="fat content" value="0%" id="0%">
-                <label class="forms__label" for="0%" tabindex="0"><span class="forms__text">0%</span></label>
-                <svg class="forms__icon forms__icon--off" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px" viewBox="0 0 25 25" enable-background="new 0 0 25 25" xml:space="preserve">
-                  <path d="M12.5,4c4.687,0,8.5,3.813,8.5,8.5c0,4.687-3.813,8.5-8.5,8.5C7.813,21,4,17.187,4,12.5C4,7.813,7.813,4,12.5,4 M12.5,0
+                <label class="forms__label" for="0%" tabindex="0">
+                  <input class="forms__input" type="radio" name="fat content" value="0%" id="0%">
+                  <svg class="forms__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="22px" viewBox="0 0 25 25" enable-background="new 0 0 25 25" xml:space="preserve">
+                    <path class="forms__radio-off" d="M12.5,4c4.687,0,8.5,3.813,8.5,8.5c0,4.687-3.813,8.5-8.5,8.5C7.813,21,4,17.187,4,12.5C4,7.813,7.813,4,12.5,4 M12.5,0
   C5.597,0,0,5.597,0,12.5S5.597,25,12.5,25S25,19.403,25,12.5S19.403,0,12.5,0L12.5,0z" />
-                </svg>
-                <svg class="forms__icon forms__icon--on" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px" viewBox="0 0 25 25" enable-background="new 0 0 25 25" xml:space="preserve">
-                  <path d="M12.5,4c4.687,0,8.5,3.813,8.5,8.5c0,4.687-3.813,8.5-8.5,8.5C7.813,21,4,17.187,4,12.5C4,7.813,7.813,4,12.5,4 M12.5,0
-  C5.597,0,0,5.597,0,12.5S5.597,25,12.5,25S25,19.403,25,12.5S19.403,0,12.5,0L12.5,0z" />
-                  <circle cx="12.5" cy="12.5" r="4.5" />
-                </svg>
+                    <circle class="forms__radio-on" cx="12.5" cy="12.5" r="4.5" />
+                  </svg>
+                  <span class="forms__text">0%</span>
+                </label>
               </div>
               <div class="forms__item-wrapper">
-                <input class="forms__input" type="radio" name="fat content" value="до 10%" id="less10%">
-                <label class="forms__label" for="less10%" tabindex="0"><span class="forms__text">до 10%</span></label>
-                <svg class="forms__icon forms__icon--off" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px" viewBox="0 0 25 25" enable-background="new 0 0 25 25" xml:space="preserve">
-                  <path d="M12.5,4c4.687,0,8.5,3.813,8.5,8.5c0,4.687-3.813,8.5-8.5,8.5C7.813,21,4,17.187,4,12.5C4,7.813,7.813,4,12.5,4 M12.5,0
+                <label class="forms__label" for="less10%" tabindex="0">
+                  <input class="forms__input" type="radio" name="fat content" value="до 10%" id="less10%">
+                  <svg class="forms__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="22px" viewBox="0 0 25 25" enable-background="new 0 0 25 25" xml:space="preserve">
+                    <path class="forms__radio-off" d="M12.5,4c4.687,0,8.5,3.813,8.5,8.5c0,4.687-3.813,8.5-8.5,8.5C7.813,21,4,17.187,4,12.5C4,7.813,7.813,4,12.5,4 M12.5,0
   C5.597,0,0,5.597,0,12.5S5.597,25,12.5,25S25,19.403,25,12.5S19.403,0,12.5,0L12.5,0z" />
-                </svg>
-                <svg class="forms__icon forms__icon--on" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px" viewBox="0 0 25 25" enable-background="new 0 0 25 25" xml:space="preserve">
-                  <path d="M12.5,4c4.687,0,8.5,3.813,8.5,8.5c0,4.687-3.813,8.5-8.5,8.5C7.813,21,4,17.187,4,12.5C4,7.813,7.813,4,12.5,4 M12.5,0
-  C5.597,0,0,5.597,0,12.5S5.597,25,12.5,25S25,19.403,25,12.5S19.403,0,12.5,0L12.5,0z" />
-                  <circle cx="12.5" cy="12.5" r="4.5" />
-                </svg>
+                    <circle class="forms__radio-on" cx="12.5" cy="12.5" r="4.5" />
+                  </svg>
+                  <span class="forms__text">до 10%</span>
+                </label>
               </div>
               <div class="forms__item-wrapper">
-                <input class="forms__input" type="radio" name="fat content" value="до 30%" id="less30%">
-                <label class="forms__label" for="less30%" tabindex="0"><span class="forms__text">до 30%</span></label>
-                <svg class="forms__icon forms__icon--off" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px" viewBox="0 0 25 25" enable-background="new 0 0 25 25" xml:space="preserve">
-                  <path d="M12.5,4c4.687,0,8.5,3.813,8.5,8.5c0,4.687-3.813,8.5-8.5,8.5C7.813,21,4,17.187,4,12.5C4,7.813,7.813,4,12.5,4 M12.5,0
+                <label class="forms__label" for="less30%" tabindex="0">
+                  <input class="forms__input" type="radio" name="fat content" value="до 30%" id="less30%">
+                  <svg class="forms__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="22px" viewBox="0 0 25 25" enable-background="new 0 0 25 25" xml:space="preserve">
+                    <path class="forms__radio-off" d="M12.5,4c4.687,0,8.5,3.813,8.5,8.5c0,4.687-3.813,8.5-8.5,8.5C7.813,21,4,17.187,4,12.5C4,7.813,7.813,4,12.5,4 M12.5,0
   C5.597,0,0,5.597,0,12.5S5.597,25,12.5,25S25,19.403,25,12.5S19.403,0,12.5,0L12.5,0z" />
-                </svg>
-                <svg class="forms__icon forms__icon--on" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px" viewBox="0 0 25 25" enable-background="new 0 0 25 25" xml:space="preserve">
-                  <path d="M12.5,4c4.687,0,8.5,3.813,8.5,8.5c0,4.687-3.813,8.5-8.5,8.5C7.813,21,4,17.187,4,12.5C4,7.813,7.813,4,12.5,4 M12.5,0
-  C5.597,0,0,5.597,0,12.5S5.597,25,12.5,25S25,19.403,25,12.5S19.403,0,12.5,0L12.5,0z" />
-                  <circle cx="12.5" cy="12.5" r="4.5" />
-                </svg>
+                    <circle class="forms__radio-on" cx="12.5" cy="12.5" r="4.5" />
+                  </svg>
+                  <span class="forms__text">до 30%</span>
+                </label>
               </div>
               <div class="forms__item-wrapper">
-                <input class="forms__input" type="radio" name="fat content" value="выше 30%" id="over30%">
-                <label class="forms__label" for="over30%" tabindex="0"><span class="forms__text">выше 30%</span></label>
-                <svg class="forms__icon forms__icon--off" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px" viewBox="0 0 25 25" enable-background="new 0 0 25 25" xml:space="preserve">
-                  <path d="M12.5,4c4.687,0,8.5,3.813,8.5,8.5c0,4.687-3.813,8.5-8.5,8.5C7.813,21,4,17.187,4,12.5C4,7.813,7.813,4,12.5,4 M12.5,0
+                <label class="forms__label" for="over30%" tabindex="0">
+                  <input class="forms__input" type="radio" name="fat content" value="выше 30%" id="over30%">
+                  <svg class="forms__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="22px" viewBox="0 0 25 25" enable-background="new 0 0 25 25" xml:space="preserve">
+                    <path class="forms__radio-off" d="M12.5,4c4.687,0,8.5,3.813,8.5,8.5c0,4.687-3.813,8.5-8.5,8.5C7.813,21,4,17.187,4,12.5C4,7.813,7.813,4,12.5,4 M12.5,0
   C5.597,0,0,5.597,0,12.5S5.597,25,12.5,25S25,19.403,25,12.5S19.403,0,12.5,0L12.5,0z" />
-                </svg>
-                <svg class="forms__icon forms__icon--on" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px" viewBox="0 0 25 25" enable-background="new 0 0 25 25" xml:space="preserve">
-                  <path d="M12.5,4c4.687,0,8.5,3.813,8.5,8.5c0,4.687-3.813,8.5-8.5,8.5C7.813,21,4,17.187,4,12.5C4,7.813,7.813,4,12.5,4 M12.5,0
-  C5.597,0,0,5.597,0,12.5S5.597,25,12.5,25S25,19.403,25,12.5S19.403,0,12.5,0L12.5,0z" />
-                  <circle cx="12.5" cy="12.5" r="4.5" />
-                </svg>
+                    <circle class="forms__radio-on" cx="12.5" cy="12.5" r="4.5" />
+                  </svg>
+                  <span class="forms__text">выше 30%</span>
+                </label>
               </div>
             </div>
           </fieldset>
@@ -232,101 +235,101 @@
         <div class="forms__fillers forms__block">
           <fieldset class="forms__fieldset">
             <legend class="forms__legend">Наполнители:</legend>
-            <div class="forms__wrapper forms__background">
-              <div class="forms__item-wrapper">
-                <input class="forms__input" type="checkbox" name="chocolate" id="filler-chocolate">
-                <label class="forms__label" for="filler-chocolate" tabindex="0">шоколадные</label>
-                <svg class="forms__icon forms__icon--off" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23px" height="23px" viewBox="0 0 23 23" enable-background="new 0 0 23 23" xml:space="preserve">
-                  <path d="M20,2c0.542,0,1,0.458,1,1v17c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1H20 M20,0H3
-  C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3V3C23,1.35,21.65,0,20,0L20,0z" />
-                </svg>
-                <svg class="forms__icon forms__icon--on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="27px" height="23px" viewBox="0 0 27 23" enable-background="new 0 0 27 23" xml:space="preserve">
-                  <g>
-                  </g>
-                  <g>
+            <div class="forms__wrapper forms__wrapper--fillers forms__background">
+              <div class="forms__item-wrapper forms__item-wrapper--filler">
+                <label class="forms__label" for="filler-chocolate" tabindex="0">
+                  <input class="forms__input" type="checkbox" name="chocolate" id="filler-chocolate">
+                  <svg class="forms__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23px" height="20px" viewBox="0 0 27 23" enable-background="new 0 0 27 23" xml:space="preserve">
                     <g>
-                      <polygon points="7.285,7.486 4.456,10.315 12.239,18.098 26.171,4.166 23.343,1.337 12.239,12.439     " />
-                      <path d="M21,20c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1h16.908l1.585-1.585C21.051,0.158,20.545,0,20,0
-      H3C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3v-9.829l-2,2V20z" />
                     </g>
-                  </g>
-                </svg>
+                    <g>
+                      <g>
+                        <polygon class="forms__checkbox-on" points="7.285,7.486 4.456,10.315 12.239,18.098 26.171,4.166 23.343,1.337 12.239,12.439     " />
+                        <path class="forms__checkbox-on" d="M21,20c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1h16.908l1.585-1.585C21.051,0.158,20.545,0,20,0
+      H3C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3v-9.829l-2,2V20z" />
+                        <path class="forms__checkbox-off" d="M20,2c0.542,0,1,0.458,1,1v17c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1H20 M20,0H3
+  C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3V3C23,1.35,21.65,0,20,0L20,0z" />
+                      </g>
+                    </g>
+                  </svg>
+                  <span class="forms__text">шоколадные</span>
+                </label>
               </div>
-              <div class="forms__item-wrapper">
-                <input class="forms__input" type="checkbox" name="sugar-powder" id="filler-sugar-powder">
-                <label class="forms__label" for="filler-sugar-powder" tabindex="0">сахарные присыпки</label>
-                <svg class="forms__icon forms__icon--off" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23px" height="23px" viewBox="0 0 23 23" enable-background="new 0 0 23 23" xml:space="preserve">
-                  <path d="M20,2c0.542,0,1,0.458,1,1v17c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1H20 M20,0H3
-  C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3V3C23,1.35,21.65,0,20,0L20,0z" />
-                </svg>
-                <svg class="forms__icon forms__icon--on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="27px" height="23px" viewBox="0 0 27 23" enable-background="new 0 0 27 23" xml:space="preserve">
-                  <g>
-                  </g>
-                  <g>
+              <div class="forms__item-wrapper forms__item-wrapper--filler">
+                <label class="forms__label" for="filler-sugar-powder" tabindex="0">
+                  <input class="forms__input" type="checkbox" name="sugar-powder" id="filler-sugar-powder">
+                  <svg class="forms__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23px" height="20px" viewBox="0 0 27 23" enable-background="new 0 0 27 23" xml:space="preserve">
                     <g>
-                      <polygon points="7.285,7.486 4.456,10.315 12.239,18.098 26.171,4.166 23.343,1.337 12.239,12.439     " />
-                      <path d="M21,20c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1h16.908l1.585-1.585C21.051,0.158,20.545,0,20,0
-      H3C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3v-9.829l-2,2V20z" />
                     </g>
-                  </g>
-                </svg>
+                    <g>
+                      <g>
+                        <polygon class="forms__checkbox-on" points="7.285,7.486 4.456,10.315 12.239,18.098 26.171,4.166 23.343,1.337 12.239,12.439     " />
+                        <path class="forms__checkbox-on" d="M21,20c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1h16.908l1.585-1.585C21.051,0.158,20.545,0,20,0
+      H3C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3v-9.829l-2,2V20z" />
+                        <path class="forms__checkbox-off" d="M20,2c0.542,0,1,0.458,1,1v17c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1H20 M20,0H3
+  C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3V3C23,1.35,21.65,0,20,0L20,0z" />
+                      </g>
+                    </g>
+                  </svg>
+                  <span class="forms__text">сахарные присыпки</span>
+                </label>
               </div>
-              <div class="forms__item-wrapper">
-                <input class="forms__input" type="checkbox" name="fruit" id="filler-fruit">
-                <label class="forms__label" for="filler-fruit" tabindex="0">фрукты</label>
-                <svg class="forms__icon forms__icon--off" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23px" height="23px" viewBox="0 0 23 23" enable-background="new 0 0 23 23" xml:space="preserve">
-                  <path d="M20,2c0.542,0,1,0.458,1,1v17c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1H20 M20,0H3
-  C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3V3C23,1.35,21.65,0,20,0L20,0z" />
-                </svg>
-                <svg class="forms__icon forms__icon--on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="27px" height="23px" viewBox="0 0 27 23" enable-background="new 0 0 27 23" xml:space="preserve">
-                  <g>
-                  </g>
-                  <g>
+              <div class="forms__item-wrapper forms__item-wrapper--filler">
+                <label class="forms__label" for="filler-fruit" tabindex="0">
+                  <input class="forms__input" type="checkbox" name="fruit" id="filler-fruit">
+                  <svg class="forms__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23px" height="20px" viewBox="0 0 27 23" enable-background="new 0 0 27 23" xml:space="preserve">
                     <g>
-                      <polygon points="7.285,7.486 4.456,10.315 12.239,18.098 26.171,4.166 23.343,1.337 12.239,12.439     " />
-                      <path d="M21,20c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1h16.908l1.585-1.585C21.051,0.158,20.545,0,20,0
-      H3C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3v-9.829l-2,2V20z" />
                     </g>
-                  </g>
-                </svg>
+                    <g>
+                      <g>
+                        <polygon class="forms__checkbox-on" points="7.285,7.486 4.456,10.315 12.239,18.098 26.171,4.166 23.343,1.337 12.239,12.439     " />
+                        <path class="forms__checkbox-on" d="M21,20c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1h16.908l1.585-1.585C21.051,0.158,20.545,0,20,0
+      H3C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3v-9.829l-2,2V20z" />
+                        <path class="forms__checkbox-off" d="M20,2c0.542,0,1,0.458,1,1v17c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1H20 M20,0H3
+  C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3V3C23,1.35,21.65,0,20,0L20,0z" />
+                      </g>
+                    </g>
+                  </svg>
+                  <span class="forms__text">фрукты</span>
+                </label>
               </div>
-              <div class="forms__item-wrapper">
-                <input class="forms__input" type="checkbox" name="syrup" id="filler-syrup">
-                <label class="forms__label" for="filler-syrup" tabindex="0">сиропы</label>
-                <svg class="forms__icon forms__icon--off" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23px" height="23px" viewBox="0 0 23 23" enable-background="new 0 0 23 23" xml:space="preserve">
-                  <path d="M20,2c0.542,0,1,0.458,1,1v17c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1H20 M20,0H3
-  C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3V3C23,1.35,21.65,0,20,0L20,0z" />
-                </svg>
-                <svg class="forms__icon forms__icon--on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="27px" height="23px" viewBox="0 0 27 23" enable-background="new 0 0 27 23" xml:space="preserve">
-                  <g>
-                  </g>
-                  <g>
+              <div class="forms__item-wrapper forms__item-wrapper--filler">
+                <label class="forms__label" for="filler-syrup" tabindex="0">
+                  <input class="forms__input" type="checkbox" name="syrup" id="filler-syrup">
+                  <svg class="forms__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23px" height="20px" viewBox="0 0 27 23" enable-background="new 0 0 27 23" xml:space="preserve">
                     <g>
-                      <polygon points="7.285,7.486 4.456,10.315 12.239,18.098 26.171,4.166 23.343,1.337 12.239,12.439     " />
-                      <path d="M21,20c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1h16.908l1.585-1.585C21.051,0.158,20.545,0,20,0
-      H3C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3v-9.829l-2,2V20z" />
                     </g>
-                  </g>
-                </svg>
+                    <g>
+                      <g>
+                        <polygon class="forms__checkbox-on" points="7.285,7.486 4.456,10.315 12.239,18.098 26.171,4.166 23.343,1.337 12.239,12.439     " />
+                        <path class="forms__checkbox-on" d="M21,20c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1h16.908l1.585-1.585C21.051,0.158,20.545,0,20,0
+      H3C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3v-9.829l-2,2V20z" />
+                        <path class="forms__checkbox-off" d="M20,2c0.542,0,1,0.458,1,1v17c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1H20 M20,0H3
+  C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3V3C23,1.35,21.65,0,20,0L20,0z" />
+                      </g>
+                    </g>
+                  </svg>
+                  <span class="forms__text">сиропы</span>
+                </label>
               </div>
-              <div class="forms__item-wrapper">
-                <input class="forms__input" type="checkbox" name="jam" id="filler-jam">
-                <label class="forms__label" for="filler-jam" tabindex="0">джемы</label>
-                <svg class="forms__icon forms__icon--off" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23px" height="23px" viewBox="0 0 23 23" enable-background="new 0 0 23 23" xml:space="preserve">
-                  <path d="M20,2c0.542,0,1,0.458,1,1v17c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1H20 M20,0H3
-  C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3V3C23,1.35,21.65,0,20,0L20,0z" />
-                </svg>
-                <svg class="forms__icon forms__icon--on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="27px" height="23px" viewBox="0 0 27 23" enable-background="new 0 0 27 23" xml:space="preserve">
-                  <g>
-                  </g>
-                  <g>
+              <div class="forms__item-wrapper forms__item-wrapper--filler">
+                <label class="forms__label" for="filler-jam" tabindex="0">
+                  <input class="forms__input" type="checkbox" name="jam" id="filler-jam">
+                  <svg class="forms__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23px" height="20px" viewBox="0 0 27 23" enable-background="new 0 0 27 23" xml:space="preserve">
                     <g>
-                      <polygon points="7.285,7.486 4.456,10.315 12.239,18.098 26.171,4.166 23.343,1.337 12.239,12.439     " />
-                      <path d="M21,20c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1h16.908l1.585-1.585C21.051,0.158,20.545,0,20,0
-      H3C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3v-9.829l-2,2V20z" />
                     </g>
-                  </g>
-                </svg>
+                    <g>
+                      <g>
+                        <polygon class="forms__checkbox-on" points="7.285,7.486 4.456,10.315 12.239,18.098 26.171,4.166 23.343,1.337 12.239,12.439     " />
+                        <path class="forms__checkbox-on" d="M21,20c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1h16.908l1.585-1.585C21.051,0.158,20.545,0,20,0
+      H3C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3v-9.829l-2,2V20z" />
+                        <path class="forms__checkbox-off" d="M20,2c0.542,0,1,0.458,1,1v17c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1H20 M20,0H3
+  C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3V3C23,1.35,21.65,0,20,0L20,0z" />
+                      </g>
+                    </g>
+                  </svg>
+                  <span class="forms__text">джемы</span>
+                </label>
               </div>
             </div>
           </fieldset>
@@ -335,80 +338,118 @@
       </form>
     </section>
     <section class="catalogue">
-      <article class="catalogue__item product-card">
-        <img class="product-card__image" src="img/ice-cream-1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
-        <p class="product-card__price">310₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+      <h2 class="visually-hidden">Каталог выбранных по параметрам товаров</h2>
+      <article class="catalogue__item product-card" tabindex="0">
+        <h3 class="visually-hidden">Карточка товара</h3>
+        <div class="product-card__wrapper">
+          <img class="product-card__image" src="img/ice-cream-1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
+          <p class="product-card__price">310₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+        </div>
         <p class="product-card__text">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
-        <a href="#" class="product-card__button button">Быстрый просмотр</a>
+        <a href="#" class="product-card__button button" tabindex="0">Быстрый просмотр</a>
       </article>
-      <article class="catalogue__item product-card">
-        <img class="product-card__image" src="img/ice-cream-2.png" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
-        <p class="product-card__price">380₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+      <article class="catalogue__item product-card" tabindex="0">
+        <h3 class="visually-hidden">Карточка товара</h3>
+        <div class="product-card__wrapper">
+          <img class="product-card__image" src="img/ice-cream-2.png" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
+          <p class="product-card__price">380₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+        </div>
         <p class="product-card__text">Сливочно-кофейное с кусочками шоколада</p>
         <a href="#" class="product-card__button button">Быстрый просмотр</a>
       </article>
-      <article class="catalogue__item product-card">
-        <img class="product-card__image" src="img/ice-cream-3.png" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
-        <p class="product-card__price">355₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+      <article class="catalogue__item product-card" tabindex="0">
+        <h3 class="visually-hidden">Карточка товара</h3>
+        <div class="product-card__wrapper">
+          <img class="product-card__image" src="img/ice-cream-3.png" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
+          <p class="product-card__price">355₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+        </div>
         <p class="product-card__text">Сливочно-клубничное с присыпкой из белого шоколада</p>
         <a href="#" class="product-card__button button">Быстрый просмотр</a>
       </article>
-      <article class="catalogue__item product-card">
-        <img class="product-card__image" src="img/ice-cream-4.png" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
-        <p class="product-card__price">415₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+      <article class="catalogue__item product-card" tabindex="0">
+        <h3 class="visually-hidden">Карточка товара</h3>
+        <div class="product-card__wrapper">
+          <img class="product-card__image" src="img/ice-cream-4.png" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
+          <p class="product-card__price">415₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+        </div>
         <p class="product-card__text">Сливочное крем-брюле с карамельной подливкой</p>
         <a href="#" class="product-card__button button">Быстрый просмотр</a>
       </article>
-      <article class="catalogue__item product-card">
-        <img class="product-card__image" src="img/ice-cream-5.png" alt="Сливочное с брусничным джемом" width="267" height="267">
-        <p class="product-card__price">325₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+      <article class="catalogue__item product-card" tabindex="0">
+        <h3 class="visually-hidden">Карточка товара</h3>
+        <div class="product-card__wrapper">
+          <img class="product-card__image" src="img/ice-cream-5.png" alt="Сливочное с брусничным джемом" width="267" height="267">
+          <p class="product-card__price">325₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+        </div>
         <p class="product-card__text">Сливочное с брусничным джемом</p>
         <a href="#" class="product-card__button button">Быстрый просмотр</a>
       </article>
-      <article class="catalogue__item product-card">
-        <img class="product-card__image" src="img/ice-cream-6.png" alt="Сливочно-черничное с цельными ягодами" width="267" height="267">
-        <p class="product-card__price">410₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+      <article class="catalogue__item product-card" tabindex="0">
+        <h3 class="visually-hidden">Карточка товара</h3>
+        <div class="product-card__wrapper">
+          <img class="product-card__image" src="img/ice-cream-6.png" alt="Сливочно-черничное с цельными ягодами" width="267" height="267">
+          <p class="product-card__price">410₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+        </div>
         <p class="product-card__text">Сливочно-черничное с цельными ягодами</p>
         <a href="#" class="product-card__button button">Быстрый просмотр</a>
       </article>
-      <article class="catalogue__item product-card">
-        <img class="product-card__image" src="img/ice-cream-7.png" alt="Сливочно-лимонное с карамельной присыпкой" width="267" height="267">
-        <p class="product-card__price">375₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+      <article class="catalogue__item product-card" tabindex="0">
+        <h3 class="visually-hidden">Карточка товара</h3>
+        <div class="product-card__wrapper">
+          <img class="product-card__image" src="img/ice-cream-7.png" alt="Сливочно-лимонное с карамельной присыпкой" width="267" height="267">
+          <p class="product-card__price">375₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+        </div>
         <p class="product-card__text">Сливочно-лимонное с карамельной присыпкой</p>
         <a href="#" class="product-card__button button">Быстрый просмотр</a>
       </article>
-      <article class="catalogue__item product-card">
-        <img class="product-card__image" src="img/ice-cream-8.png" alt="Сливочное с шоколадной стружкой" width="267" height="267">
-        <p class="product-card__price">320₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+      <article class="catalogue__item product-card" tabindex="0">
+        <h3 class="visually-hidden">Карточка товара</h3>
+        <div class="product-card__wrapper">
+          <img class="product-card__image" src="img/ice-cream-8.png" alt="Сливочное с шоколадной стружкой" width="267" height="267">
+          <p class="product-card__price">320₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+        </div>
         <p class="product-card__text">Сливочное с шоколадной стружкой</p>
         <a href="#" class="product-card__button button">Быстрый просмотр</a>
       </article>
-      <article class="catalogue__item product-card">
-        <img class="product-card__image" src="img/ice-cream-9.png" alt="Сливочно-ванильное с кусочками шоколада" width="267" height="267">
-        <p class="product-card__price">440₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+      <article class="catalogue__item product-card" tabindex="0">
+        <h3 class="visually-hidden">Карточка товара</h3>
+        <div class="product-card__wrapper">
+          <img class="product-card__image" src="img/ice-cream-9.png" alt="Сливочно-ванильное с кусочками шоколада" width="267" height="267">
+          <p class="product-card__price">440₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+        </div>
         <p class="product-card__text">Сливочно-ванильное с кусочками шоколада</p>
         <a href="#" class="product-card__button button">Быстрый просмотр</a>
       </article>
-      <article class="catalogue__item product-card">
-        <img class="product-card__image" src="img/ice-cream-10.png" alt="Сливочное с ментоловым сиропом" width="267" height="267">
-        <p class="product-card__price">435₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+      <article class="catalogue__item product-card" tabindex="0">
+        <h3 class="visually-hidden">Карточка товара</h3>
+        <div class="product-card__wrapper">
+          <img class="product-card__image" src="img/ice-cream-10.png" alt="Сливочное с ментоловым сиропом" width="267" height="267">
+          <p class="product-card__price">435₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+        </div>
         <p class="product-card__text">Сливочное с ментоловым сиропом</p>
         <a href="#" class="product-card__button button">Быстрый просмотр</a>
       </article>
-      <article class="catalogue__item product-card">
-        <img class="product-card__image" src="img/ice-cream-11.png" alt="Сливочное с кусочками чёрного шоколада" width="267" height="267">
-        <p class="product-card__price">355₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+      <article class="catalogue__item product-card" tabindex="0">
+        <h3 class="visually-hidden">Карточка товара</h3>
+        <div class="product-card__wrapper">
+          <img class="product-card__image" src="img/ice-cream-11.png" alt="Сливочное с кусочками чёрного шоколада" width="267" height="267">
+          <p class="product-card__price">355₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+        </div>
         <p class="product-card__text">Сливочное с кусочками чёрного шоколада</p>
         <a href="#" class="product-card__button button">Быстрый просмотр</a>
       </article>
-      <article class="catalogue__item product-card">
-        <img class="product-card__image" src="img/ice-cream-12.png" alt="Сливочное с мятным сиропом" width="267" height="267">
-        <p class="product-card__price">420₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+      <article class="catalogue__item product-card" tabindex="0">
+        <h3 class="visually-hidden">Карточка товара</h3>
+        <div class="product-card__wrapper">
+          <img class="product-card__image" src="img/ice-cream-12.png" alt="Сливочное с мятным сиропом" width="267" height="267">
+          <p class="product-card__price">420₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+        </div>
         <p class="product-card__text">Сливочное с мятным сиропом</p>
         <a href="#" class="product-card__button button">Быстрый просмотр</a>
       </article>
     </section>
     <section class="pagination">
+      <h3 class="visually-hidden">Список страниц</h3>
       <div class="pagination__wrapper">
         <a class="pagination__button"><span class="visually-hidden">Назад</span><svg class="pagination__arrow pagination__arrow--left pagination__arrow--disabled" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8px" height="12px" viewBox="0 0 8 12" enable-background="new 0 0 8 12" xml:space="preserve">
             <path d="M7.237,5.642L1.729,0.133c-0.198-0.198-0.519-0.198-0.716,0s-0.198,0.519,0,0.716L6.163,6l-5.151,5.15
@@ -505,8 +546,8 @@
       <li class="info__item"><a class="info__link" href="#">Экологические стандарты</a></li>
     </ul>
     <div class="main-footer__developers developers">
-      <a class="developers__link" href="#"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML Академии"></a>
-      <p class="developers__text">Сделано в <a class="developers__link" href="#">HTML Академии</a> &copy; 2019</p>
+      <a class="developers__link" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML Академии"></a>
+      <p class="developers__text">Сделано в <a class="developers__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Академии</a> &copy; 2019</p>
     </div>
   </footer>
 </body>
