@@ -21,27 +21,19 @@
           <a class="main-nav__link main-nav__link--current">Каталог</a>
           <ul class="drop-down">
             <li class="drop-down__item drop-down__item--important">
-              <div class="drop-down__item-wrapper drop-down__item-wrapper--important">
-                <a class="drop-down__link drop-down__link--important" href="#">Новинки</a>
-              </div>
+              <a class="drop-down__link drop-down__link--important" href="#">Новинки</a>
             </li>
             <li class="drop-down__item drop-down__item--current">
-              <div class="drop-down__item-wrapper">
-                <a class="drop-down__link drop-down__link--current">Сливочное</a>
-              </div>
+              <a class="drop-down__link drop-down__link--current">Сливочное</a>
             </li>
             <li class="drop-down__item">
-              <div class="drop-down__item-wrapper">
-                <a class="drop-down__link" href="#">Щербеты</a></div>
+              <a class="drop-down__link" href="#">Щербеты</a></div>
             </li>
             <li class="drop-down__item">
-              <div class="drop-down__item-wrapper">
-                <a class="drop-down__link" href="#">Фруктовый лёд</a>
-              </div>
+              <a class="drop-down__link" href="#">Фруктовый лёд</a>
             </li>
             <li class="drop-down__item">
-              <div class="drop-down__item-wrapper">
-                <a class="drop-down__link" href="#">Мелорин</a></div>
+              <a class="drop-down__link" href="#">Мелорин</a></div>
             </li>
           </ul>
         </li>
@@ -160,10 +152,10 @@
             <legend class="forms__legend forms__legend--sorting">Сортировка:</legend>
             <div class="forms__select-wrapper">
               <select class="forms__background forms__select" name="sorting" id="sorting">
-                <option value="по популярности" selected>по популярности</option>
-                <option value="сначала недорогие">сначала недорогие</option>
-                <option value="сначала дорогие">сначала дорогие</option>
-                <option value="по жирности">по жирности</option>
+                <option class="forms__select-option" value="по популярности" selected>по популярности</option>
+                <option class="forms__select-option" value="сначала недорогие">сначала недорогие</option>
+                <option class="forms__select-option" value="сначала дорогие">сначала дорогие</option>
+                <option class="forms__select-option" value="по жирности">по жирности</option>
               </select>
               <div class="forms__select-afterelement"></div>
             </div>
@@ -176,8 +168,12 @@
               <div class="range-control__line range-control__line--passive">
                 <div class="range-control__line range-control__line--active"></div>
               </div>
-              <button class="range-control__button range-control__button--min" type="button"></button>
-              <button class="range-control__button range-control__button--max" type="button"></button>
+              <button class="range-control__button range-control__button--min" type="button">
+                <span class="visually-hidden">Кнопка значения минимальной цены</span>
+              </button>
+              <button class="range-control__button range-control__button--max" type="button">
+                <span class="visually-hidden">Кнопка значения максимальной цены</span>
+              </button>
             </div>
           </fieldset>
         </div>
@@ -540,14 +536,16 @@
       </li>
     </ul>
     <ul class="main-footer__info info">
-      <li class="info__item "><a class="info__link info__link--heart" href="#"><b>Для поставщиков</b></a></li>
+      <li class="info__item "><a class="info__link info__link--heart" href="#"><b>Для поставщиков</b></a>
+        <div class="info__heart"></div>
+      </li>
       <li class="info__item"><a class="info__link" href="#">О производстве</a></li>
       <li class="info__item"><a class="info__link" href="#">Наши документы</a></li>
       <li class="info__item"><a class="info__link" href="#">Экологические стандарты</a></li>
     </ul>
     <div class="main-footer__developers developers">
-      <a class="developers__link" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML Академии"></a>
-      <p class="developers__text">Сделано в <a class="developers__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Академии</a> &copy; 2019</p>
+      <a class="developers__link" href="https://htmlacademy.ru/intensive/htmlcss"><img class="developers__image" src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML Академии"></a>
+      <p class="developers__text">Сделано в <a class="developers__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2019</p>
     </div>
   </footer>
 </body>

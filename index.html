@@ -21,27 +21,19 @@
           <a class="main-nav__link" href="catalog.html">Каталог</a>
           <ul class="drop-down">
             <li class="drop-down__item drop-down__item--important">
-              <div class="drop-down__item-wrapper drop-down__item-wrapper--important">
-                <a class="drop-down__link drop-down__link--important" href="#">Новинки</a>
-              </div>
+              <a class="drop-down__link drop-down__link--important" href="#">Новинки</a>
             </li>
             <li class="drop-down__item">
-              <div class="drop-down__item-wrapper">
-                <a class="drop-down__link" href="catalog.html">Сливочное</a>
-              </div>
+              <a class="drop-down__link" href="catalog.html">Сливочное</a>
             </li>
             <li class="drop-down__item">
-              <div class="drop-down__item-wrapper">
-                <a class="drop-down__link" href="#">Щербеты</a></div>
+              <a class="drop-down__link" href="#">Щербеты</a></div>
             </li>
             <li class="drop-down__item">
-              <div class="drop-down__item-wrapper">
-                <a class="drop-down__link" href="#">Фруктовый лёд</a>
-              </div>
+              <a class="drop-down__link" href="#">Фруктовый лёд</a>
             </li>
             <li class="drop-down__item">
-              <div class="drop-down__item-wrapper">
-                <a class="drop-down__link" href="#">Мелорин</a></div>
+              <a class="drop-down__link" href="#">Мелорин</a></div>
             </li>
           </ul>
         </li>
@@ -128,25 +120,25 @@
     <section class="slider container">
       <div class="slider__wrapper">
         <div class="slider__item">
-          <img class="slider__image" src="img/bg-slider-1.png" width="1045" height="881" alt="Крем-брюле и пломбир с малиновым джемом">
+          <img class="slider__image slider__image--1" src="img/bg-slider-1.png" width="1045" height="881" alt="Крем-брюле и пломбир с малиновым джемом">
           <h2 class="slider__title">Крем-брюле и пломбир с малиновым джемом</h2>
           <a class="slider__button button" href="#">Давайте оба!</a>
         </div>
         <div class="slider__item slider__item--hidden">
-          <img class="slider__image" src="img/bg-slider-2.png" width="1065" height="859" alt="Шоколадный пломбир и лимонный сорбет">
+          <img class="slider__image slider__image--2" src="img/bg-slider-2.png" width="1065" height="859" alt="Шоколадный пломбир и лимонный сорбет">
           <h2 class="slider__title">Шоколадный пломбир и лимонный сорбет </h2>
           <a class="slider__button button" href="#">Давайте оба!</a>
         </div>
         <div class="slider__item slider__item--hidden">
-          <img class="slider__image" src="img/bg-slider-3.png" width="1079" height="854" alt="Пломбир с помадкой и клубничный щербет">
-          <h2 class="slider__title">Пломбир с помадкой и клубничный щербет</h2>
+          <img class="slider__image slider__image--3" src="img/bg-slider-3.png" width="1079" height="854" alt="Пломбир с помадкой и клубничный щербет">
+          <h2 class="slider__title">Пломбир с помадкой и&nbsp;клубничный щербет</h2>
           <a class="slider__button button" href="#">Давайте оба!</a>
         </div>
       </div>
       <div class="slider__ctrl-wrapper">
-        <button class="slider__ctrl-btn slider__ctrl-btn--current" type="button"></button>
-        <button class="slider__ctrl-btn" type="button"></button>
-        <button class="slider__ctrl-btn" type="button"></button>
+        <button class="slider__ctrl-btn slider__ctrl-btn--current" type="button" id="slide-1"></button>
+        <button class="slider__ctrl-btn" type="button" id="slide-2"></button>
+        <button class="slider__ctrl-btn" type="button" id="slide-3"></button>
       </div>
     </section>
     <section class="promo container">
@@ -162,43 +154,45 @@
       </div>
     </section>
     <section class="hit-sales container">
-      <h2 class="visually-hidden">Хит продаж</h2>
-      <article class="hit-sales__item product-card">
-        <h3 class="visually-hidden">Карточка товара</h3>
-        <div class="product-card__wrapper">
-          <img class="product-card__image" src="img/ice-cream-1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
-          <p class="product-card__price">310₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
-        </div>
-        <p class="product-card__text">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
-        <a href="#" class="product-card__button button">Быстрый просмотр</a>
-      </article>
-      <article class="hit-sales__item product-card">
-        <h3 class="visually-hidden">Карточка товара</h3>
-        <div class="product-card__wrapper">
-          <img class="product-card__image" src="img/ice-cream-2.png" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
-          <p class="product-card__price">380₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
-        </div>
-        <p class="product-card__text">Сливочно-кофейное с кусочками шоколада</p>
-        <a href="#" class="product-card__button button">Быстрый просмотр</a>
-      </article>
-      <article class="hit-sales__item product-card">
-        <h3 class="visually-hidden">Карточка товара</h3>
-        <div class="product-card__wrapper">
-          <img class="product-card__image" src="img/ice-cream-3.png" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
-          <p class="product-card__price">355₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
-        </div>
-        <p class="product-card__text">Сливочно-клубничное с присыпкой из белого шоколада</p>
-        <a href="#" class="product-card__button button">Быстрый просмотр</a>
-      </article>
-      <article class="hit-sales__item product-card">
-        <h3 class="visually-hidden">Карточка товара</h3>
-        <div class="product-card__wrapper">
-          <img class="product-card__image" src="img/ice-cream-4.png" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
-          <p class="product-card__price">415₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
-        </div>
-        <p class="product-card__text">Сливочное крем-брюле с карамельной подливкой</p>
-        <a href="#" class="product-card__button button">Быстрый просмотр</a>
-      </article>
+      <div class="hit-sales__wrapper">
+        <h2 class="visually-hidden">Хит продаж</h2>
+        <article class="hit-sales__item product-card">
+          <h3 class="visually-hidden">Карточка товара</h3>
+          <div class="product-card__wrapper">
+            <img class="product-card__image" src="img/ice-cream-1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
+            <p class="product-card__price">310₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+          </div>
+          <p class="product-card__text">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+          <a href="#" class="product-card__button button">Быстрый просмотр</a>
+        </article>
+        <article class="hit-sales__item product-card">
+          <h3 class="visually-hidden">Карточка товара</h3>
+          <div class="product-card__wrapper">
+            <img class="product-card__image" src="img/ice-cream-2.png" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
+            <p class="product-card__price">380₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+          </div>
+          <p class="product-card__text">Сливочно-кофейное с кусочками шоколада</p>
+          <a href="#" class="product-card__button button">Быстрый просмотр</a>
+        </article>
+        <article class="hit-sales__item product-card">
+          <h3 class="visually-hidden">Карточка товара</h3>
+          <div class="product-card__wrapper">
+            <img class="product-card__image" src="img/ice-cream-3.png" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
+            <p class="product-card__price">355₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+          </div>
+          <p class="product-card__text">Сливочно-клубничное с присыпкой из белого шоколада</p>
+          <a href="#" class="product-card__button button">Быстрый просмотр</a>
+        </article>
+        <article class="hit-sales__item product-card">
+          <h3 class="visually-hidden">Карточка товара</h3>
+          <div class="product-card__wrapper">
+            <img class="product-card__image" src="img/ice-cream-4.png" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
+            <p class="product-card__price">415₽<span class="visually-hidden">рублей</span><span class="product-card__weight">/кг</span></p>
+          </div>
+          <p class="product-card__text">Сливочное крем-брюле с карамельной подливкой</p>
+          <a href="#" class="product-card__button button">Быстрый просмотр</a>
+        </article>
+      </div>
     </section>
     <section class="advantages container">
       <h2 class="advantages__title">Магазин Глейси &mdash; это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
@@ -229,14 +223,14 @@
         <div class="map__info">
           <div class="map__info-wrapper map__info-wrapper-1">
             <p class="map__text map__text--short">Адрес главного офиса и офлайн-магазина:</p>
-            <p class="map__text map__text--big">ул. Большая Конюшенная <br> 19/8, Санкт-Петербург</p>
+            <p class="map__text map__text--big">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
           </div>
           <div class="map__info-wrapper map__info-wrapper-2">
             <p class="map__text">Для заказов по телефону:</p>
-            <p class="map__text map__text--big">8 812 450-25-25</p>
-            <p class="map__text">(с 10 до 20 ежедневно)</p>
+            <p class="map__text map__text--phone">8 812 450-25-25</p>
+            <p class="map__text map__text--time">(с 10 до 20 ежедневно)</p>
           </div>
-          <a class="map__button button">Форма обратной связи</a>
+          <a class="map__button button" href="#">Форма обратной связи</a>
         </div>
       </div>
     </section>
@@ -310,14 +304,16 @@
       </li>
     </ul>
     <ul class="main-footer__info info">
-      <li class="info__item"><a class="info__link info__link--heart" href="#"><b>Для поставщиков</b></a></li>
+      <li class="info__item"><a class="info__link info__link--heart" href="#"><b>Для поставщиков</b></a>
+        <div class="info__heart"></div>
+      </li>
       <li class="info__item"><a class="info__link" href="#">О производстве</a></li>
       <li class="info__item"><a class="info__link" href="#">Наши документы</a></li>
       <li class="info__item"><a class="info__link" href="#">Экологические стандарты</a></li>
     </ul>
     <div class="main-footer__developers developers">
-      <a class="developers__link" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML Академии"></a>
-      <p class="developers__text">Сделано в <a class="developers__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Академии</a> &copy; 2019</p>
+      <a class="developers__link" href="https://htmlacademy.ru/intensive/htmlcss"><img class="developers__image" src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML Академии"></a>
+      <p class="developers__text">Сделано в <a class="developers__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2019</p>
     </div>
   </footer>
   <section class="feedback modal">
@@ -334,7 +330,7 @@
       </div>
       <div class="feedback__wrapper">
         <label class="visually-hidden">Напишите что-нибудь...</label>
-        <textarea class="input input--textarea" placeholder="Напишите что-нибудь..."></textarea>
+        <textarea class="feedback__input feedback__input--textarea input" placeholder="Напишите что-нибудь..."></textarea>
       </div>
       <button type="submit" class="feedback__button button">Отправить</button>
     </form>
