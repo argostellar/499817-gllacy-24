@@ -871,13 +871,13 @@ img {
   border-radius: 50%;
 }
 
-#slide1 {
+.slide-green {
   background-color: #849d8f;
 }
-#slide2 {
+.slide-blue {
   background-color: #8996a6;
 }
-#slide3 {
+.slide-red {
   background-color: #9d8b84;
 }
 
